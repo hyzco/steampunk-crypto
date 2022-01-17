@@ -111,23 +111,23 @@ export const Barn: React.FC<Props> = ({ farmSize, balance }) => {
             {/* Barn Decorations */}
             <div style={{ gridColumn: '10/11', gridRow: '8/9'}}>
                 <img id='box1' src={box} />
-                <img id='cauliflower-box' src={cauliflower} />
+                {/* <img id='cauliflower-box' src={cauliflower} /> */}
             </div>
             <div style={{ gridColumn: '11/12', gridRow: '9/10'}}>
                 <img id='box2' src={box} />
-                <img id='potato-box-1' src={potato} />
-                <img id='potato-box-2' src={potato} />
+                {/* <img id='potato-box-1' src={potato} />
+                <img id='potato-box-2' src={potato} /> */}
             </div>
 
             <div style={{ gridColumn: '14/15', gridRow: '9/10'}}>
                 <img id='box2' src={box} />
-                <img id='sunflower-box-1' src={sunflower} />
-                <img id='sunflower-box-2' src={sunflower} />
+                {/* <img id='sunflower-box-1' src={sunflower} />
+                <img id='sunflower-box-2' src={sunflower} /> */}
             </div>
             <div style={{ gridColumn: '14/15', gridRow: '9/10'}}>
                 <img id='box1' src={box} />
-                <img id='pumpkin-box-1' src={pumpkin} />
-                <img id='pumpkin-box-2' src={pumpkin} />
+                {/* <img id='pumpkin-box-1' src={pumpkin} />
+                <img id='pumpkin-box-2' src={pumpkin} /> */}
             </div>
         </>
     )
