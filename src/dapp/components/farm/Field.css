@@ -70,8 +70,8 @@
 }
 
 .potato-seedling {
-  width: 36% !important;
-  top: 15px;
+  width: 70% !important;
+  top: -6px;
 }
 
 .cauliflower-seedling {
@@ -166,7 +166,7 @@
   z-index: 1;
 }
 
-#door {
+/* #door {
   position: absolute;
   width: 77%;
   bottom: 0;
@@ -180,14 +180,14 @@
   width: 66%;
   top: -91%;
   left: 5%;
-}
+} */
 
 #smoke {
   position: absolute;
-  z-index: 2;
-  width: 66%;
-  top: -156%;
-  left: -9%;
+  z-index: 9;
+  width: 80%;
+  top: -252%;
+  left: 201%;
 }
 
 #sunflower-pot {
@@ -199,11 +199,10 @@
 }
 
 #level {
+  width: 300%;
   position: absolute;
-  width: 145%;
-  bottom: 118%;
-  left: 126%;
-  z-index: 2;
+  bottom: 0;
+  z-index: 1;
 }
 
 #level2 {
@@ -231,19 +230,17 @@
 }
 
 #side-house {
-  width: 150%;
-  left: -129%;
+  width: 300%;
   position: absolute;
-  z-index: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 #side-house2 {
-  width: 130%;
-  left: 288%;
+  width: 300%;
   position: absolute;
-  z-index: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 .harvest {
