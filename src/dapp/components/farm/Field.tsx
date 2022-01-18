@@ -1,7 +1,7 @@
 import React from "react";
 
-import sunflower from "../../images/sunflower/plant.png";
-import sunflowerSeedling from "../../images/sunflower/seedling.png";
+import sunflower from "../../images/sunflower/plant.gif";
+import sunflowerSeedling from "../../images/sunflower/seedling.gif";
 import pumpkin from "../../images/pumpkin/plant.png";
 import pumpkinSeedling from "../../images/pumpkin/seedling.png";
 import beetroot from "../../images/beetroot/plant.png";

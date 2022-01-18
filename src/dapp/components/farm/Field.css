@@ -7,7 +7,7 @@
   display: flex;
   position: relative;
   cursor: pointer;
-  z-index: 9;
+  z-index: auto;
 }
 
 .field:hover > img {
@@ -28,7 +28,7 @@
 
 .seedling {
   position: absolute;
-  top: 10px;
+  top: -10px;
   width: 50% !important;
 }
 
@@ -49,7 +49,7 @@
 
 .sunflower {
   position: absolute;
-  top: -17%;
+  top: -38%;
   width: 55% !important;
   z-index: 1;
 }
