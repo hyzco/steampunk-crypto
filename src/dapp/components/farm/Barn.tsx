@@ -12,9 +12,10 @@ import baseLvl4 from "../../images/buildings/base-lvl-4.png";
 import smoke from "../../images/buildings/smoke.gif";
 
 import box from "../../images/decorations/box.png";
+import clockwork from "../../images/decorations/clockwork.gif";
 // import cauliflower from '../../images/cauliflower/fruit.png'
-// import potato from '../../images/potato/fruit.png'
-// import sunflower from '../../images/sunflower/fruit.png'
+// import potato from '../../images/potato/fruit.gif'
+// import sunflower from '../../images/sunflower/fruit.gif'
 // import pumpkin from '../../images/pumpkin/fruit.png'
 // import sunflowerPot from '../../images/decorations/sunflower_pot.png'
 
@@ -135,6 +136,7 @@ export const Barn: React.FC<Props> = ({ farmSize, balance }) => {
           farmSize={farmSize}
           balance={balance}
         />
+        <img id="clockwork" src={clockwork} title="Batunun Anıtı" />
       </div>
 
       {/* Barn Decorations */}

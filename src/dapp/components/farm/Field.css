@@ -64,9 +64,9 @@
 
 .potato {
   position: absolute;
-  top: -17%;
-  left: 8%;
-  width: 85% !important;
+  top: -8%;
+  left: 18%;
+  width: 65% !important;
   z-index: 1;
 }
 
@@ -242,6 +242,14 @@
   position: absolute;
   bottom: 0;
   z-index: 1;
+}
+
+#clockwork {
+  width: 112%;
+  position: absolute;
+  left: 312%;
+  bottom: -1%;
+  z-index: 2;
 }
 
 .harvest {

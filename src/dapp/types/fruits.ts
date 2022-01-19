@@ -1,10 +1,10 @@
 import Big from "big.js";
 
-import sunflower from "../images/sunflower/fruit.png";
+import sunflower from "../images/sunflower/fruit.gif";
 import pumpkin from "../images/pumpkin/fruit.png";
 import beetroot from "../images/beetroot/fruit.png";
 import cauliflower from "../images/cauliflower/fruit.png";
-import potato from "../images/potato/fruit.png";
+import potato from "../images/potato/fruit.gif";
 import radish from "../images/radish/fruit.png";
 import parsnip from "../images/parsnip/fruit.png";
 
@@ -32,7 +32,7 @@ export interface FruitItem {
 export const FRUITS: FruitItem[] = [
   {
     fruit: Fruit.Sunflower,
-    name: "Sunflower",
+    name: "MK1",
     image: sunflower,
     buyPrice: 0.01,
     sellPrice: 0.02,
@@ -41,7 +41,7 @@ export const FRUITS: FruitItem[] = [
   },
   {
     fruit: Fruit.Potato,
-    name: "Potato",
+    name: "MK2",
     image: potato,
     buyPrice: 0.1,
     sellPrice: 0.16,

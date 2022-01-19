@@ -44,7 +44,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
       const load = async () => {
         const balances =
           await machineState.context.blockChain.getCharityBalances();
-        setBalances(balances);
+        // setBalances(balances);
       };
       load();
     }
@@ -102,90 +102,10 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
           </div>
         </div>
 
-        <span id="donate-minimum-description">Minimum of $0.1 MATIC </span>
+        <span id="donate-minimum-description">Minimum of $0.1 BNB </span>
         <div id="charities">
           <div>
-            <div className="charity">Cool Earth</div>
-            <span className="charity-description">
-              Aim to halt deforestation and its impact on climate change.
-            </span>
-            <OverlayTrigger
-              key="water"
-              overlay={(props) => (
-                <Tooltip id="tooltip-water" {...props}>
-                  {Charities.hz}
-                </Tooltip>
-              )}
-            >
-              <span className="total-donated">
-                {balances.coolEarthBalance &&
-                  `$${balances.coolEarthBalance} donated`}
-              </span>
-            </OverlayTrigger>
-            <div className="charity-buttons">
-              <Button
-                onClick={() =>
-                  window.open(
-                    "https://www.coolearth.org/cryptocurrency-donations/"
-                  )
-                }
-              >
-                About
-                <img src={questionMark} id="question" />
-              </Button>
-              <Button
-                onClick={() =>
-                  onSelect({
-                    charity: Charities.hz,
-                    value: donation.toString(),
-                  })
-                }
-              >
-                Donate & Play
-              </Button>
-            </div>
-          </div>
-          <div>
-            <div className="charity">The Water project</div>
-            <span className="charity-description">
-              You can provide clean, safe and reliable water today.
-            </span>
-            <OverlayTrigger
-              key="water"
-              overlay={(props) => (
-                <Tooltip id="tooltip-water" {...props}>
-                  {Charities.shew}
-                </Tooltip>
-              )}
-            >
-              <span className="total-donated">
-                {balances.waterBalance && `$${balances.waterBalance} donated`}
-              </span>
-            </OverlayTrigger>
-
-            <div className="charity-buttons">
-              <Button
-                onClick={() =>
-                  window.open("https://thewaterproject.org/donate-ethereum")
-                }
-              >
-                About
-                <img src={questionMark} id="question" />
-              </Button>
-              <Button
-                onClick={() =>
-                  onSelect({
-                    charity: Charities.shew,
-                    value: donation.toString(),
-                  })
-                }
-              >
-                Donate & Play
-              </Button>
-            </div>
-          </div>
-          <div>
-            <div className="charity">Heifer</div>
+            <div className="charity">Start playing</div>
             <span className="charity-description">
               We do more than train farmers. We grow incomes.
             </span>
@@ -193,7 +113,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               key="water"
               overlay={(props) => (
                 <Tooltip id="tooltip-water" {...props}>
-                  {Charities.shew}
+                  {Charities.payment}
                 </Tooltip>
               )}
             >
@@ -215,7 +135,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               <Button
                 onClick={() =>
                   onSelect({
-                    charity: Charities.shew,
+                    charity: Charities.payment,
                     value: donation.toString(),
                   })
                 }
