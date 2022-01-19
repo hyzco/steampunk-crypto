@@ -134,7 +134,7 @@ export const Field: React.FC<Props> = ({
     }
 
     if (square.fruit === Fruit.Beetroot) {
-      return <img src={beetrootSeedling} className="seedling" />;
+      return <img src={beetrootSeedling} className="seedling beetroot-seedling" />;
     }
 
     if (square.fruit === Fruit.Cauliflower) {

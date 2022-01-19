@@ -87,6 +87,11 @@
   z-index: 1;
 }
 
+.beetroot-seedling {
+  width: 80% !important;
+  top: -9px;
+}
+
 .cauliflower {
   position: absolute;
   top: 13%;

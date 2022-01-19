@@ -59,11 +59,11 @@ export const FRUITS: FruitItem[] = [
   },
   {
     fruit: Fruit.Beetroot,
-    name: "Beetroot",
+    name: "MK3",
     image: beetroot,
     buyPrice: 1,
     sellPrice: 1.8,
-    landRequired: 8,
+    landRequired: 5,
     harvestMinutes: 4 * 60,
   },
   {
