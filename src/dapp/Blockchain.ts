@@ -67,11 +67,11 @@ export class BlockChain {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0xdf9B4b57865B403e08c85568442f95c26b7896b0"
+        "0x89458a571439f5281DDCf006bf408e8c14bD81a9"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0x6e5Fa679211d7F6b54e14E187D34bA547c5d3fe0"
+        "0xb04ccFB4852F26850637C5C94EE78771c1b45B57s"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
@@ -160,7 +160,7 @@ export class BlockChain {
       this.oldInventory = null;
       const chainId = await this.web3.eth.getChainId();
 
-      if (chainId === 137) {
+      if (chainId === 97) {
         await this.connectToMatic();
 
         await this.loadFarm();
@@ -647,9 +647,9 @@ export class BlockChain {
   }
 
   public async getCharityBalances() {
-    const coolEarth = this.web3.eth.getBalance(Charity.CoolEarth);
-    const waterProject = this.web3.eth.getBalance(Charity.TheWaterProject);
-    const heifer = this.web3.eth.getBalance(Charity.Heifer);
+    const coolEarth = this.web3.eth.getBalance(Charity.hz);
+    const waterProject = this.web3.eth.getBalance(Charity.shew);
+    const heifer = this.web3.eth.getBalance(Charity.shew);
     const [coolEarthBalance, waterBalance, heiferBalance] =
       await Promise.all([coolEarth, waterProject, heifer]);
 

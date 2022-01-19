@@ -319,15 +319,15 @@
 }
 
 .baldMan {
-  width: 60%;
+  width: 72%;
   position: relative;
   top: 14%;
 }
 
 .chat {
   width: 38%;
-  top: -25%;
-  left: -11%;
+  top: -92%;
+  left: 56%;
   position: relative;
 
   animation-name: floating;

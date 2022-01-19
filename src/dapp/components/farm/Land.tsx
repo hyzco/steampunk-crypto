@@ -65,7 +65,7 @@ export const Land: React.FC<Props> = ({
 
   return (
     <>
-    {/* //seems useless  */}
+      {/* //seems useless  */}
       {columns.map((_, column) =>
         rows.map((_, row) =>
           (column + row) % 2 ? null : (
@@ -156,7 +156,6 @@ export const Land: React.FC<Props> = ({
                     ))
                 } */}
       </div>
-
       Water
       {new Array(50).fill(null).map((_, index) => (
         <img
@@ -168,7 +167,6 @@ export const Land: React.FC<Props> = ({
           }}
         />
       ))}
-
       <div id="water" />
     </>
   );

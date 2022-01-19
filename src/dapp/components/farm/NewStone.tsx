@@ -141,13 +141,14 @@ export const Stones: React.FC<Props> = ({ inventory }) => {
         const choppedTreeCount = 10 - treeStrength;
         if (choppedTreeCount > index || machineState.matches("onboarding")) {
           return (
-            <div style={gridPosition}>
-              <img
-                src={smallRock}
-                className="mined-rock gather-tree"
-                alt="tree"
-              />
-            </div>
+            <></>
+            // <div style={gridPosition}>
+            //   <img
+            //     src={smallRock}
+            //     className="mined-rock gather-tree"
+            //     alt="tree"
+            //   />
+            // </div>
           );
         }
 

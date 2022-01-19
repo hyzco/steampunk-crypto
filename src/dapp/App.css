@@ -42,11 +42,12 @@ body {
 }
 
 #inner > img {
-  width: 20px;
+  width: 24px;
   margin-right: 10px;
   image-rendering: pixelated;
   filter: drop-shadow(1px 1px 0px white) drop-shadow(-1px 0px 0px white)
     drop-shadow(0px -1px 0px white);
+  margin-bottom: 2px;
 }
 
 #edge {

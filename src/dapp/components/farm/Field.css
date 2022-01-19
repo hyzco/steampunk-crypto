@@ -7,7 +7,11 @@
   display: flex;
   position: relative;
   cursor: pointer;
+<<<<<<< HEAD
+  z-index: 2;
+=======
   z-index: auto;
+>>>>>>> master
 }
 
 .field:hover > img {
@@ -63,15 +67,15 @@
 
 .potato {
   position: absolute;
-  top: 5%;
-  left: 28%;
-  width: 44% !important;
+  top: -17%;
+  left: 8%;
+  width: 85% !important;
   z-index: 1;
 }
 
 .potato-seedling {
-  width: 70% !important;
-  top: -6px;
+  width: 80% !important;
+  top: -9px;
 }
 
 .cauliflower-seedling {

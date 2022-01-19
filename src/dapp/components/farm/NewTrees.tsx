@@ -139,9 +139,10 @@ export const Trees: React.FC<Props> = ({ inventory }) => {
         const choppedTreeCount = 10 - treeStrength;
         if (choppedTreeCount > index || machineState.matches("onboarding")) {
           return (
-            <div style={gridPosition}>
-              <img src={stump} className="wood-stump gather-tree" alt="tree" />
-            </div>
+            <></>
+            // <div style={gridPosition}>
+            //   <img src={stump} className="wood-stump gather-tree" alt="tree" />
+            // </div>
           );
         }
 
