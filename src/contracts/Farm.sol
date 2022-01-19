@@ -1,11 +1,7 @@
-pragma solidity >=0.6.0 <0.8.0;
+// SPDX-License-Identifier: MIT
+pragma solidity  0.8.11 ;
 pragma experimental ABIEncoderV2;
-
-//import "@openzeppelin/contracts/math/Math.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.3.0/contracts/math/Math.sol";
-
 import "./Token.sol";
-
 // Items, NFTs or resources
 interface ERCItem {
     function mint(address account, uint256 amount) external;
@@ -16,7 +12,6 @@ interface ERCItem {
     function stake(address account, uint256 amount) external;
     function getStaked(address account) external returns(uint256);
 }
-
 contract FarmV2 {
     using SafeMath for uint256;
 
@@ -33,30 +28,24 @@ contract FarmV2 {
         uint size;
         Fruit fruit;
     }
-
     uint farmCount = 0;
     bool isMigrating = true;
     mapping(address => Square[]) fields;
     mapping(address => uint) syncedAt;
     mapping(address => uint) rewardsOpenedAt;
-
     constructor(TokenV2 _token) public {
         token = _token;
     }
-    
-    // Need to upload these in batches so separate from constructor
     function uploadV1Farms(V1Farm[] memory farms) public {
         require(isMigrating, "MIGRATION_COMPLETE");
 
         uint decimals = token.decimals();
         
-        // Carry over farms from V1
         for (uint i=0; i < farms.length; i += 1) {
             V1Farm memory farm = farms[i];
 
             Square[] storage land = fields[farm.account];
             
-            // Treat them with a ripe plant
             Square memory plant = Square({
                 fruit: farm.fruit,
                 createdAt: 0
@@ -83,28 +72,22 @@ contract FarmV2 {
     event FarmSynced(address indexed _address);
     event ItemCrafted(address indexed _address, address _item);
 
-    // Function to receive Ether. msg.data must be empty
     receive() external payable {}
 
-    function createFarm(address payable _charity) public payable {
+    function createFarm(address payable Payments) public payable {
         require(syncedAt[msg.sender] == 0, "FARM_EXISTS");
 
         uint decimals = token.decimals();
 
         require(
-            // Donation must be at least $0.10 to play
             msg.value >= 1 * 10**(decimals - 1),
             "INSUFFICIENT_DONATION"
         );
 
         require(
-            // The Water Project - double check
-            _charity == address(0x060697E9d4EEa886EbeCe57A974Facd53A40865B)
-            // Heifer
-            || _charity == address(0xD3F81260a44A1df7A7269CF66Abd9c7e4f8CdcD1)
-            // Cool Earth
-            || _charity == address(0x3c8cB169281196737c493AfFA8F49a9d823bB9c5),
-            "INVALID_CHARITY"
+            // double check
+            Payments == address("paymentkontratadres")            
+            "INVALID_PAYMENT"
         );
 
 
@@ -118,7 +101,6 @@ contract FarmV2 {
             createdAt: 0
         });
 
-        // Each farmer starts with 5 fields & 3 Sunflowers
         land.push(empty);
         land.push(sunflower);
         land.push(sunflower);
@@ -126,10 +108,9 @@ contract FarmV2 {
         land.push(empty);
 
         syncedAt[msg.sender] = block.timestamp;
-        // They must wait X days before opening their first reward
         rewardsOpenedAt[msg.sender] = block.timestamp;
 
-        (bool sent, bytes memory data) = _charity.call{value: msg.value}("");
+        (bool sent, bytes memory data) = Payments.call{value: msg.value}("");
         require(sent, "DONATION_FAILED");
 
         farmCount += 1;
