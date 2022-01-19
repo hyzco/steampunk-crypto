@@ -113,7 +113,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               key="water"
               overlay={(props) => (
                 <Tooltip id="tooltip-water" {...props}>
-                  {Charities.CoolEarth}
+                  {Charities.hz}
                 </Tooltip>
               )}
             >
@@ -136,7 +136,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               <Button
                 onClick={() =>
                   onSelect({
-                    charity: Charities.CoolEarth,
+                    charity: Charities.hz,
                     value: donation.toString(),
                   })
                 }
@@ -154,7 +154,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               key="water"
               overlay={(props) => (
                 <Tooltip id="tooltip-water" {...props}>
-                  {Charities.TheWaterProject}
+                  {Charities.shew}
                 </Tooltip>
               )}
             >
@@ -175,7 +175,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               <Button
                 onClick={() =>
                   onSelect({
-                    charity: Charities.TheWaterProject,
+                    charity: Charities.shew,
                     value: donation.toString(),
                   })
                 }
@@ -193,7 +193,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               key="water"
               overlay={(props) => (
                 <Tooltip id="tooltip-water" {...props}>
-                  {Charities.Heifer}
+                  {Charities.shew}
                 </Tooltip>
               )}
             >
@@ -215,7 +215,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
               <Button
                 onClick={() =>
                   onSelect({
-                    charity: Charities.Heifer,
+                    charity: Charities.shew,
                     value: donation.toString(),
                   })
                 }
