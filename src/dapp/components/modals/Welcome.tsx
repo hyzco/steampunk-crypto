@@ -4,7 +4,7 @@ import Big from "big.js";
 import questionMark from "../../images/ui/expression_confused.png";
 import alert from "../../images/ui/expression_alerted.png";
 import logo from "../../images/ui/logo.png";
-import sunflower from "../../images/sunflower/fruit.png";
+import sunflower from "../../images/sunflower/fruit.gif";
 
 import { secondsToLongString } from "../../utils/time";
 
