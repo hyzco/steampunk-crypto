@@ -86,7 +86,7 @@ contract FarmV2 {
 
         require(
             // double check
-            Payments == address("paymentkontratadres")            
+            Payments == address(0xBa7cd3d5f2c4419905DF495E4801b3826448a76c),            
             "INVALID_PAYMENT"
         );
 

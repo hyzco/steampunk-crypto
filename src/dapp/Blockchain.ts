@@ -1,5 +1,7 @@
+import { Eth as EthWeb3 } from "web3-eth";
 import Web3 from "web3";
 
+import Web3Utils from "web3-utils";
 import Token from "../abis/Token.json";
 import Farm from "../abis/Farm.json";
 import CommunityCrafting from "../abis/CommunityCrafting.json";
@@ -63,15 +65,15 @@ export class BlockChain {
   private saveCount: number = 100;
 
   private isTrialAccount: boolean = false;
-  private async connectToMatic() {
+  private async connectToBinance() {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0x89458a571439f5281DDCf006bf408e8c14bD81a9"
+        "0x2D9552f9BF74B47307749188b8170c526DfB3cAd"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0xb04ccFB4852F26850637C5C94EE78771c1b45B57s"
+        "0x458360AD501c8008ce0805360109f5907FBc93EF"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
@@ -133,12 +135,22 @@ export class BlockChain {
     return this.details;
   }
 
+  
   private async setupWeb3() {
     if ((window as any).ethereum) {
       try {
         // Request account access if needed
-        await (window as any).ethereum.enable();
+        // await (window as any).ethereum.enable();
         this.web3 = new Web3((window as any).ethereum);
+        // const provider = new EthWeb3.providers.HttpProvider(
+        //   'https://rinkeby.infura.io/v3/172a5e1258804b4d919ded68b1ae1490'
+        // );
+
+        // const web3 = new Web3(provider);
+        // this.web3 = web3;
+
+        // console.log(this.web3);
+        // this.web3 = new Web3((window as any).web3.currentProvider);
       } catch (error) {
         // User denied account access...
         console.error(error);
@@ -161,7 +173,8 @@ export class BlockChain {
       const chainId = await this.web3.eth.getChainId();
 
       if (chainId === 97) {
-        await this.connectToMatic();
+        //97 testnet //56 main net
+        await this.connectToBinance();
 
         await this.loadFarm();
       } else {
@@ -231,7 +244,7 @@ export class BlockChain {
   }
 
   public async createFarm(donation: Donation) {
-    const value = this.web3.utils.toWei(donation.value, "ether");
+    const value = Web3Utils.toWei(donation.value, "ether");
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
@@ -409,7 +422,7 @@ export class BlockChain {
       .getLand(this.account)
       .call({ from: this.account });
 
-    const balance = this.web3.utils.fromWei(rawBalance.toString());
+    const balance = Web3Utils.fromWei(rawBalance.toString());
     console.log({ balance });
     return {
       balance: Number(balance),
@@ -438,7 +451,7 @@ export class BlockChain {
     const mintAmount =
       recipe.type === "NFT"
         ? amount
-        : this.web3.utils.toWei(amount.toString(), "ether");
+        : Web3Utils.toWei(amount.toString(), "ether");
 
     await new Promise(async (resolve, reject) => {
       this.farm.methods
@@ -495,7 +508,7 @@ export class BlockChain {
     this.oldInventory = this.inventory;
     console.log({ recipe, amount });
 
-    const value = this.web3.utils.toWei(eth.toString(), "ether");
+    const value = Web3Utils.toWei(eth.toString(), "ether");
     const gasPrice = await this.estimate(2);
 
     await new Promise(async (resolve, reject) => {
@@ -557,7 +570,7 @@ export class BlockChain {
     this.oldInventory = this.inventory;
 
     console.log({ resource, amount });
-    const gwei = this.web3.utils.toWei(amount.toString(), "ether");
+    const gwei = Web3Utils.toWei(amount.toString(), "ether");
 
     await new Promise(async (resolve, reject) => {
       this.farm.methods
@@ -637,7 +650,7 @@ export class BlockChain {
       .totalSupply()
       .call({ from: this.account });
 
-    const supply = this.web3.utils.fromWei(totalSupply);
+    const supply = Web3Utils.fromWei(totalSupply);
 
     this.cachedTotalSupply = Number(supply);
   }
@@ -647,16 +660,21 @@ export class BlockChain {
   }
 
   public async getCharityBalances() {
-    const coolEarth = this.web3.eth.getBalance(Charity.hz);
-    const waterProject = this.web3.eth.getBalance(Charity.shew);
-    const heifer = this.web3.eth.getBalance(Charity.shew);
-    const [coolEarthBalance, waterBalance, heiferBalance] =
-      await Promise.all([coolEarth, waterProject, heifer]);
+    // const coolEarth = this.web3.eth.getBalance(Charity.hz);
+    // const waterProject = this.web3.eth.getBalance(Charity.shew);
+    // const heifer = this.web3.eth.getBalance(Charity.shew);
+    // const [coolEarthBalance, waterBalance, heiferBalance] =
+    //   await Promise.all([coolEarth, waterProject, heifer]);
 
+    // return {
+    //   coolEarthBalance: this.web3.utils.fromWei(coolEarthBalance, "ether"),
+    //   waterBalance: this.web3.utils.fromWei(waterBalance, "ether"),
+    //   heiferBalance: this.web3.utils.fromWei(heiferBalance, "ether"),
+    // };
     return {
-      coolEarthBalance: this.web3.utils.fromWei(coolEarthBalance, "ether"),
-      waterBalance: this.web3.utils.fromWei(waterBalance, "ether"),
-      heiferBalance: this.web3.utils.fromWei(heiferBalance, "ether"),
+      coolEarthBalance: 0,
+      waterBalance: 0,
+      heiferBalance: 0,
     };
   }
 
@@ -687,7 +705,7 @@ export class BlockChain {
         return 0;
       }
 
-      const converted = this.web3.utils.fromWei(reward.toString());
+      const converted = Web3Utils.fromWei(reward.toString());
 
       return Number(converted);
     } catch (e) {
@@ -783,7 +801,7 @@ export class BlockChain {
       .allowance(this.account, address)
       .call({ from: this.account });
 
-    const wei = this.web3.utils.toWei(amount.toString(), "ether");
+    const wei = Web3Utils.toWei(amount.toString(), "ether");
 
     if (Number(alreadyApproved) >= Number(wei)) {
       return true;
@@ -835,7 +853,7 @@ export class BlockChain {
         ...itemValues,
         [itemName]: isNFT
           ? Number(balance)
-          : Math.ceil(Number(this.web3.utils.fromWei(balance))),
+          : Math.ceil(Number(Web3Utils.fromWei(balance))),
       };
     }, {} as Record<ItemName, number>);
 
@@ -901,7 +919,7 @@ export class BlockChain {
       .getAvailable(this.account)
       .call({ from: this.account });
 
-    return Number(this.web3.utils.fromWei(strength));
+    return Number(Web3Utils.fromWei(strength));
   }
 
   public async loadStoneStrength() {
@@ -909,7 +927,7 @@ export class BlockChain {
       .getAvailable(this.account)
       .call({ from: this.account });
 
-    return Number(this.web3.utils.fromWei(strength));
+    return Number(Web3Utils.fromWei(strength));
   }
 
   public async loadIronStrength() {
@@ -917,7 +935,7 @@ export class BlockChain {
       .getAvailable(this.account)
       .call({ from: this.account });
 
-    return Number(this.web3.utils.fromWei(strength));
+    return Number(Web3Utils.fromWei(strength));
   }
 
   public async loadGoldStrength() {
@@ -925,7 +943,7 @@ export class BlockChain {
       .getAvailable(this.account)
       .call({ from: this.account });
 
-    return Number(this.web3.utils.fromWei(strength));
+    return Number(Web3Utils.fromWei(strength));
   }
 
   public async loadEggCollectionTime() {
