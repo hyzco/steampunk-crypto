@@ -49,9 +49,9 @@
 
 .selected-fruit-mk3 {
   position: absolute;
-  left: 13px;
-  top: -2px;
-  width: 36px;
+  left: 5px;
+  top: -12px;
+  width: 52px;
   image-rendering: pixelated;
 }
 

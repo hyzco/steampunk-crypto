@@ -2,7 +2,7 @@ import Big from "big.js";
 
 import sunflower from "../images/sunflower/fruit.gif";
 import pumpkin from "../images/pumpkin/fruit.png";
-import beetroot from "../images/beetroot/fruit.png";
+import beetroot from "../images/beetroot/fruit.gif";
 import cauliflower from "../images/cauliflower/fruit.png";
 import potato from "../images/potato/fruit.gif";
 import radish from "../images/radish/fruit.png";
