@@ -7,11 +7,7 @@
   display: flex;
   position: relative;
   cursor: pointer;
-<<<<<<< HEAD
   z-index: 2;
-=======
-  z-index: auto;
->>>>>>> master
 }
 
 .field:hover > img {
