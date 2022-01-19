@@ -109,13 +109,14 @@ export const Gold: React.FC<Props> = ({ inventory }) => {
           machineState.matches("onboarding")
         ) {
           return (
-            <div style={gridPosition}>
-              <img
-                src={smallRock}
-                className="mined-rock gather-tree"
-                alt="tree"
-              />
-            </div>
+            <></>
+            // <div style={gridPosition}>
+            //   <img
+            //     src={smallRock}
+            //     className="mined-rock gather-tree"
+            //     alt="tree"
+            //   />
+            // </div>
           );
         }
 

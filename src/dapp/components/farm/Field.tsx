@@ -8,7 +8,7 @@ import beetroot from "../../images/beetroot/plant.png";
 import beetrootSeedling from "../../images/beetroot/seedling.png";
 import cauliflower from "../../images/cauliflower/plant.png";
 import cauliflowerSeedling from "../../images/cauliflower/seedling.png";
-import potato from "../../images/potato/plant.png";
+import potato from "../../images/potato/plant.gif";
 import potatoSeedling from "../../images/potato/seedling.gif";
 import radish from "../../images/radish/plant.png";
 import radishSeedling from "../../images/radish/seedling.png";
