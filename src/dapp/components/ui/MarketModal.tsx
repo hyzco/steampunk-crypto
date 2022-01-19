@@ -5,7 +5,7 @@ import Big from "big.js";
 import { service } from "../../machine";
 
 import alert from "../../images/ui/expression_alerted.png";
-import sunflower from "../../images/sunflower/fruit.png";
+import sunflower from "../../images/sunflower/fruit.gif";
 
 import { Panel } from "./Panel";
 import {

@@ -5,6 +5,9 @@ import "./Land.css";
 import { Square, Fruit, ActionableItem } from "../../types/contract";
 
 import waterEdge from "../../images/water/edge.png";
+import wheel1 from "../../images/decorations/water/wheel1.png";
+import whellHalf from "../../images/decorations/water/whell-half.png";
+import whellHalf2 from "../../images/decorations/water/whell-half.png";
 
 import { FirstBlock } from "./FirstBlock";
 import { SecondLand } from "./SecondBlock";
@@ -40,6 +43,18 @@ interface Props {
 
 const columns = Array(60).fill(null);
 const rows = Array(20).fill(null);
+
+// Straight Wheel
+const leftRandomStraight = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+const topRandomStraight = Math.floor(Math.random() * (60 - 20 + 5)) + 20;
+
+// Straight Half
+const leftRandomHalf = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+const topRandomHalf = Math.floor(Math.random() * (60 - 20 + 5)) + 20;
+
+// Straight Half2
+const leftRandomHalf2 = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+const topRandomHalf2 = Math.floor(Math.random() * (60 - 20 + 5)) + 20;
 
 // based on the amount of fields, determine the level
 const landToLevel = {
@@ -167,6 +182,33 @@ export const Land: React.FC<Props> = ({
           }}
         />
       ))}
+      <img
+        className="wheel"
+        src={wheel1}
+        style={{
+          position: "absolute",
+          left: `${leftRandomStraight * 40}px`,
+          top: `${800 + topRandomStraight}px`,
+        }}
+      />
+      <img
+        className="wheel"
+        src={whellHalf}
+        style={{
+          position: "absolute",
+          left: `${leftRandomHalf * 40}px`,
+          top: `${800 + topRandomHalf}px`,
+        }}
+      />
+      <img
+        className="wheel"
+        src={whellHalf2}
+        style={{
+          position: "absolute",
+          left: `${leftRandomHalf2 * 40}px`,
+          top: `${800 + topRandomHalf2}px`,
+        }}
+      />
       <div id="water" />
     </>
   );

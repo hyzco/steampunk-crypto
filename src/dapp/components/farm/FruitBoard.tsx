@@ -131,7 +131,7 @@ export const FruitBoard: React.FC<Props> = ({
     <>
       <div id="basket" onClick={() => setShowModal(true)}>
         <img className="basket-fruit" src={disc} />
-        <img className="selected-fruit" src={selectedItem.image} />
+        <img className={`selected-fruit-${selectedItem.name.toLowerCase()}`} src={selectedItem.image} title={selectedItem.name} />
         <Message>Change</Message>
       </div>
       <Modal
