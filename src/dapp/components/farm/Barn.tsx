@@ -16,7 +16,7 @@ import clockwork from "../../images/decorations/clockwork.gif";
 // import cauliflower from '../../images/cauliflower/fruit.png'
 // import potato from '../../images/potato/fruit.gif'
 // import sunflower from '../../images/sunflower/fruit.gif'
-// import pumpkin from '../../images/pumpkin/fruit.png'
+// import pumpkin from '../../images/pumpkin/fruit.gif'
 // import sunflowerPot from '../../images/decorations/sunflower_pot.png'
 
 import { service } from "../../machine";

@@ -5,6 +5,7 @@ import "./Land.css";
 import { Square, Fruit, ActionableItem } from "../../types/contract";
 
 import waterEdge from "../../images/water/edge.png";
+import bone from "../../images/decorations/water/bone.png";
 import wheel1 from "../../images/decorations/water/wheel1.png";
 import whellHalf from "../../images/decorations/water/whell-half.png";
 import whellHalf2 from "../../images/decorations/water/whell-half.png";
@@ -182,6 +183,7 @@ export const Land: React.FC<Props> = ({
           }}
         />
       ))}
+      {/* whell */}
       <img
         className="wheel"
         src={wheel1}
@@ -207,6 +209,34 @@ export const Land: React.FC<Props> = ({
           position: "absolute",
           left: `${leftRandomHalf2 * 40}px`,
           top: `${800 + topRandomHalf2}px`,
+        }}
+      />
+      {/* bone */}
+      <img
+        className="bone"
+        src={bone}
+        style={{
+          position: "absolute",
+          left: `${65 + 1000}px`,
+          top: `${800 + 2}px`,
+        }}
+      />
+      <img
+        className="bone"
+        src={bone}
+        style={{
+          position: "absolute",
+          left: "921px",
+          top: "841px",
+        }}
+      />
+      <img
+        className="bone"
+        src={bone}
+        style={{
+          position: "absolute",
+          left: "1139px",
+          top: "859px",
         }}
       />
       <div id="water" />

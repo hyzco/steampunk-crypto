@@ -1,10 +1,10 @@
 import Big from "big.js";
 
 import sunflower from "../images/sunflower/fruit.gif";
-import pumpkin from "../images/pumpkin/fruit.png";
-import beetroot from "../images/beetroot/fruit.gif";
-import cauliflower from "../images/cauliflower/fruit.png";
 import potato from "../images/potato/fruit.gif";
+import beetroot from "../images/beetroot/fruit.gif";
+import pumpkin from "../images/pumpkin/fruit.gif";
+import cauliflower from "../images/cauliflower/fruit.png";
 import radish from "../images/radish/fruit.png";
 import parsnip from "../images/parsnip/fruit.png";
 
@@ -12,8 +12,8 @@ export enum Fruit {
   None = "0",
   Sunflower = "1",
   Potato = "2",
-  Pumpkin = "3",
-  Beetroot = "4",
+  Beetroot = "3",
+  Pumpkin = "4",
   Cauliflower = "5",
   Parsnip = "6",
   Radish = "7",
@@ -49,18 +49,18 @@ export const FRUITS: FruitItem[] = [
     harvestMinutes: 5,
   },
   {
-    fruit: Fruit.Pumpkin,
-    name: "Pumpkin",
-    image: pumpkin,
-    buyPrice: 0.4,
-    sellPrice: 0.8,
-    landRequired: 8,
-    harvestMinutes: 60,
-  },
-  {
     fruit: Fruit.Beetroot,
     name: "MK3",
     image: beetroot,
+    buyPrice: 1,
+    sellPrice: 0.4,
+    landRequired: 5,
+    harvestMinutes: 60,
+  },
+  {
+    fruit: Fruit.Pumpkin,
+    name: "MK4",
+    image: pumpkin,
     buyPrice: 1,
     sellPrice: 1.8,
     landRequired: 5,

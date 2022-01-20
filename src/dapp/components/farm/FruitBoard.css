@@ -55,6 +55,14 @@
   image-rendering: pixelated;
 }
 
+.selected-fruit-mk4 {
+  position: absolute;
+  left: 5px;
+  top: -6px;
+  width: 53px;
+  image-rendering: pixelated;
+}
+
 .market {
   font-size: 12px;
   color: white;

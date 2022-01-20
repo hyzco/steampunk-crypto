@@ -330,9 +330,9 @@ export const Tiles: React.FC<Props> = () => {
         <img className="bridge" src={bridge} />
       </div>
 
-      <div style={{ gridColumn: "7/8", gridRow: "16/15" }}>
+      {/* <div style={{ gridColumn: "7/8", gridRow: "16/15" }}>
         <img className="bridge" src={bridge} />
-      </div>
+      </div> */}
 
       <div id="environment-left">
         <DecorationFiller />
