@@ -30,6 +30,9 @@ import { Reward } from "./Reward";
 import { FruitItem } from "../../types/fruits";
 import { Inventory, Supply } from "../../types/crafting";
 
+import bridge from "../../images/decorations/bridge.png";
+
+
 interface Props {
   land: Square[];
   balance: number;
@@ -81,6 +84,7 @@ export const Land: React.FC<Props> = ({
 
   return (
     <>
+      {/* <div id="waterTop" /> */}
       {/* //seems useless  */}
       {columns.map((_, column) =>
         rows.map((_, row) =>
@@ -99,7 +103,20 @@ export const Land: React.FC<Props> = ({
           )
         )
       )}
-      <div className="farm">
+        {/* {new Array(50).fill(null).map((_, index) => (
+        <img
+          className="water-edge"
+          src={waterEdge}
+          style={{
+            position: "absolute",
+            top: `80px`,
+            left: `${index * 62.5}px`,
+            zIndex: 1,
+            transform: 'rotate(180.40deg)'
+          }}
+        />
+      ))} */}
+        <div className="farm">
         <FirstBlock
           fruits={fruits}
           selectedItem={selectedItem}
@@ -141,13 +158,13 @@ export const Land: React.FC<Props> = ({
           onPlant={onPlant}
         />
 
-        <Trees inventory={inventory} />
-        <Stones inventory={inventory} />
-        <Iron inventory={inventory} />
-        <Gold inventory={inventory} />
+        {/* <Trees inventory={inventory} /> */}
+        {/* <Stones inventory={inventory} /> */}
+        {/* <Iron inventory={inventory} />
+        <Gold inventory={inventory} /> */}
 
-        <Chickens inventory={inventory} />
-        <NFTs inventory={inventory} />
+        {/* <Chickens inventory={inventory} /> */}
+        {/* <NFTs inventory={inventory} /> */}
 
         <Barn farmSize={land.length} balance={balance} />
         {/* <Blacksmith
@@ -171,8 +188,8 @@ export const Land: React.FC<Props> = ({
                         <Field square={square} onClick={square.fruit === Fruit.None ? () => onPlant(index) : () => onHarvest(index)}/> 
                     ))
                 } */}
-      </div>
-      Water
+        </div>
+      
       {new Array(50).fill(null).map((_, index) => (
         <img
           className="water-edge"
@@ -184,6 +201,7 @@ export const Land: React.FC<Props> = ({
         />
       ))}
       {/* whell */}
+     
       <img
         className="wheel"
         src={wheel1}
@@ -211,7 +229,6 @@ export const Land: React.FC<Props> = ({
           top: `${800 + topRandomHalf2}px`,
         }}
       />
-      {/* bone */}
       <img
         className="bone"
         src={bone}
@@ -239,7 +256,7 @@ export const Land: React.FC<Props> = ({
           top: "859px",
         }}
       />
-      <div id="water" />
+      <div id="waterBottom" />
     </>
   );
 };
