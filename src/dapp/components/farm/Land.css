@@ -240,6 +240,15 @@
   image-rendering: pixelated;
 }
 
+.bone {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 99;
+  top: 800px;
+  image-rendering: pixelated;
+}
+
 .stone-vertical {
   height: 200%;
   width: 28px;
@@ -307,7 +316,7 @@
   width: 135%;
   z-index: 999;
   position: absolute;
-  top: -66%;
+  top: -60%;
 }
 
 .man {
