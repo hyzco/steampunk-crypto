@@ -66,7 +66,13 @@
   background: url("../../images/land/dirt/top-corner2.png");
 }
 
-.farm {
+.farm{
+  position: sticky;
+  z-index: 1;
+  top: 80px;
+}
+
+.farm-container {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
@@ -75,9 +81,10 @@
   margin: auto;
   overflow-y: clip;
   position: relative;
+  transform: scale(0.7);
 }
 
-.farm > div {
+.farm-container > div {
   height: calc(1000px / 16);
   background-size: cover;
   image-rendering: pixelated;
@@ -220,14 +227,24 @@
   z-index: 99;
   top: 750px;
   image-rendering: pixelated;
+  z-index: 0;
 }
 
-#water {
+#waterBottom {
   background: #83D678;
   position: absolute;
-  top: 760px;
+  top: 800px;
   width: 10000%;
   height: 500%;
+  left: -5000%;
+}
+
+#waterTop {
+  background: #83D678;
+  position: absolute;
+  top: 0px;
+  width: 10000%;
+  height: 100px;
   left: -5000%;
 }
 
@@ -361,6 +378,17 @@
   cursor: pointer;
 }
 
+#environment-top {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-auto-rows: 1fr;
+  width: 1000px;
+  top: -100%;
+  height: 100%;
+}
+
 #environment-left {
   position: absolute;
   display: grid;
@@ -380,6 +408,17 @@
   grid-auto-rows: 1fr;
   width: 1000px;
   left: -100%;
+  height: 100%;
+}
+
+#environment-bottom {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-auto-rows: 1fr;
+  width: 1000px;
+  top: 100%;
   height: 100%;
 }
 

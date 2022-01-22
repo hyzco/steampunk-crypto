@@ -19,7 +19,7 @@ interface Props {}
 const fields = [1, 4, 6, 10, 13, 15];
 
 // Repeated decorations to
-const DecorationFiller = () => (
+export const DecorationFiller = () => (
   <>
     {fields.map((position, index) => (
       <>
@@ -84,6 +84,7 @@ export const Tiles: React.FC<Props> = () => {
   return (
     <>
       {/*First to second path*/}
+   
       <div className="dirt" style={{ gridColumn: "4/5", gridRow: "8/9" }} />
       <div className="dirt" style={{ gridColumn: "5/6", gridRow: "8/9" }} />
       <div className="dirt" style={{ gridColumn: "6/7", gridRow: "8/9" }} />
@@ -333,12 +334,18 @@ export const Tiles: React.FC<Props> = () => {
       {/* <div style={{ gridColumn: "7/8", gridRow: "16/15" }}>
         <img className="bridge" src={bridge} />
       </div> */}
+      <div id="environment-top">
+        <DecorationFiller />
+      </div>
 
       <div id="environment-left">
         <DecorationFiller />
       </div>
 
       <div id="environment-right">
+        <DecorationFiller />
+      </div>
+      <div id="environment-bottom">
         <DecorationFiller />
       </div>
     </>
