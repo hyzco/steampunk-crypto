@@ -67,9 +67,10 @@
 }
 
 .farm{
-  position: sticky;
+  /* position: sticky;
   z-index: 1;
   top: 80px;
+  overflow-x: hidden; */
 }
 
 .farm-container {
@@ -81,7 +82,7 @@
   margin: auto;
   overflow-y: clip;
   position: relative;
-  transform: scale(0.7);
+  transform: scale(0.75);
 }
 
 .farm-container > div {
@@ -305,6 +306,7 @@
   position: relative;
   top: 10%;
   left: 6%;
+  transform: scale(0.4);
 }
 
 .stump {
@@ -314,11 +316,28 @@
   left: 10%;
 }
 
-.leaves {
+.lamp {
   width: 70%;
   position: relative;
   top: 15%;
   left: 10%;
+  transform: scale(1.8);
+}
+
+.bench {
+  width: 70%;
+  position: relative;
+  top: 15%;
+  left: 10%;
+  transform: scale(1.8);
+}
+
+.bear {
+  width: 60%;
+  position: relative;
+  left: 21%;
+  top: 20%;
+  transform: scale(1.4);
 }
 
 .rock1 {
@@ -330,7 +349,7 @@
 
 .bridge {
   left: 0;
-  width: 135%;
+  width: 50px;
   z-index: 999;
   position: absolute;
   top: -60%;

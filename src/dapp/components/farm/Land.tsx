@@ -30,6 +30,9 @@ import { Reward } from "./Reward";
 import { FruitItem } from "../../types/fruits";
 import { Inventory, Supply } from "../../types/crafting";
 
+import bridge from "../../images/decorations/bridge.png";
+
+
 interface Props {
   land: Square[];
   balance: number;
@@ -201,7 +204,14 @@ export const Land: React.FC<Props> = ({
         />
       ))}
       {/* whell */}
-      {/* <img
+     
+      <img className="bridge" src={bridge} style={{
+          position: "absolute",
+          left: `800px`,
+          top: `760px`,
+        }} />
+     
+      <img
         className="wheel"
         src={wheel1}
         style={{
@@ -254,7 +264,7 @@ export const Land: React.FC<Props> = ({
           left: "1139px",
           top: "859px",
         }}
-      /> */}
+      />
       <div id="waterBottom" />
     </>
   );
