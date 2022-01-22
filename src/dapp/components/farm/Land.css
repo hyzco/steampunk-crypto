@@ -1,5 +1,6 @@
 #root {
   background: #454653;
+  height: 100vh;
 }
 
 #container {
@@ -66,14 +67,8 @@
   background: url("../../images/land/dirt/top-corner2.png");
 }
 
-.farm{
-  /* position: sticky;
-  z-index: 1;
-  top: 80px;
-  overflow-x: hidden; */
-}
 
-.farm-container {
+.farm {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
@@ -82,10 +77,10 @@
   margin: auto;
   overflow-y: clip;
   position: relative;
-  transform: scale(0.75);
+  /* transform: scale(0.75); */
 }
 
-.farm-container > div {
+.farm > div {
   height: calc(1000px / 16);
   background-size: cover;
   image-rendering: pixelated;

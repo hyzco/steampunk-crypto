@@ -84,9 +84,9 @@ export const Land: React.FC<Props> = ({
 
   return (
     <>
-      <div id="waterTop" />
+      {/* <div id="waterTop" /> */}
       {/* //seems useless  */}
-      {/* {columns.map((_, column) =>
+      {columns.map((_, column) =>
         rows.map((_, row) =>
           (column + row) % 2 ? null : (
             <div
@@ -102,8 +102,8 @@ export const Land: React.FC<Props> = ({
             />
           )
         )
-      )} */}
-        {new Array(50).fill(null).map((_, index) => (
+      )}
+        {/* {new Array(50).fill(null).map((_, index) => (
         <img
           className="water-edge"
           src={waterEdge}
@@ -115,9 +115,8 @@ export const Land: React.FC<Props> = ({
             transform: 'rotate(180.40deg)'
           }}
         />
-      ))}
-      <div className="farm">
-        <div className="farm-container">
+      ))} */}
+        <div className="farm">
         <FirstBlock
           fruits={fruits}
           selectedItem={selectedItem}
@@ -159,13 +158,13 @@ export const Land: React.FC<Props> = ({
           onPlant={onPlant}
         />
 
-        <Trees inventory={inventory} />
-        <Stones inventory={inventory} />
-        <Iron inventory={inventory} />
-        <Gold inventory={inventory} />
+        {/* <Trees inventory={inventory} /> */}
+        {/* <Stones inventory={inventory} /> */}
+        {/* <Iron inventory={inventory} />
+        <Gold inventory={inventory} /> */}
 
-        <Chickens inventory={inventory} />
-        <NFTs inventory={inventory} />
+        {/* <Chickens inventory={inventory} /> */}
+        {/* <NFTs inventory={inventory} /> */}
 
         <Barn farmSize={land.length} balance={balance} />
         {/* <Blacksmith
@@ -190,8 +189,6 @@ export const Land: React.FC<Props> = ({
                     ))
                 } */}
         </div>
-      </div>
-      
       
       {new Array(50).fill(null).map((_, index) => (
         <img
@@ -204,12 +201,6 @@ export const Land: React.FC<Props> = ({
         />
       ))}
       {/* whell */}
-     
-      <img className="bridge" src={bridge} style={{
-          position: "absolute",
-          left: `800px`,
-          top: `760px`,
-        }} />
      
       <img
         className="wheel"

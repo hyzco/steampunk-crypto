@@ -316,9 +316,9 @@ export const Tiles: React.FC<Props> = () => {
         <img className="lamp" src={lamp} />
       </div>
 
-      <div style={{ gridColumn: "6/7", gridRow: "9/10" }}>
+      {/* <div style={{ gridColumn: "6/7", gridRow: "9/10" }}>
         <img className="bear" src={bear} />
-      </div>
+      </div> */}
 
       <div style={{ gridColumn: "2/3", gridRow: "12/13" }}>
         <img className="bear" src={bear} />
@@ -328,9 +328,9 @@ export const Tiles: React.FC<Props> = () => {
         {/* <img className="bear" src={bear} /> */}
       </div>
 
-      {/* <div style={{ gridColumn: "7/8", gridRow: "16/15" }}>
+      <div style={{ gridColumn: "7/8", gridRow: "14/15" }}>
         <img className="bridge" src={bridge} />
-      </div> */}
+      </div>
       <div id="environment-top">
         <DecorationFiller />
       </div>
