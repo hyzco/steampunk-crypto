@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity  0.8.11 ;
 pragma experimental ABIEncoderV2;
+
+import "./Payments.sol";
 import "./Token.sol";
 // Items, NFTs or resources
 interface ERCItem {
@@ -33,7 +35,7 @@ contract FarmV2 {
     mapping(address => Square[]) fields;
     mapping(address => uint) syncedAt;
     mapping(address => uint) rewardsOpenedAt;
-    constructor(TokenV2 _token) public {
+    constructor(TokenV2 _token)  {
         token = _token;
     }
     function uploadV1Farms(V1Farm[] memory farms) public {
@@ -74,7 +76,12 @@ contract FarmV2 {
 
     receive() external payable {}
 
-    function createFarm(address payable Payments) public payable {
+    /*function setAddressPayments(address payable _addressPayments) external{
+        addressPayments = _addressPayments;
+    }
+    */
+
+    function createFarm(address payable adres) public payable {
         require(syncedAt[msg.sender] == 0, "FARM_EXISTS");
 
         uint decimals = token.decimals();
@@ -86,7 +93,7 @@ contract FarmV2 {
 
         require(
             // double check
-            Payments == address(0xBa7cd3d5f2c4419905DF495E4801b3826448a76c),            
+            adres == address(0x5Eefb4a292BcEDc61Eef4123d00Ce7A3f98d8D06),            
             "INVALID_PAYMENT"
         );
 
@@ -110,7 +117,7 @@ contract FarmV2 {
         syncedAt[msg.sender] = block.timestamp;
         rewardsOpenedAt[msg.sender] = block.timestamp;
 
-        (bool sent, bytes memory data) = Payments.call{value: msg.value}("");
+        (bool sent, bytes memory data) = adres.call{value: msg.value}("");
         require(sent, "DONATION_FAILED");
 
         farmCount += 1;
