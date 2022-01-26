@@ -12,7 +12,7 @@ import {
 
 import sunflower from "../../images/sunflower/fruit.gif";
 import potato from "../../images/potato/fruit.gif";
-import pumpkin from "../../images/pumpkin/fruit.png";
+import pumpkin from "../../images/pumpkin/fruit.gif";
 import beetroot from "../../images/beetroot/fruit.gif";
 import cauliflower from "../../images/cauliflower/fruit.png";
 import parsnip from "../../images/parsnip/fruit.png";

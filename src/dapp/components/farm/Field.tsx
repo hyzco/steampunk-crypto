@@ -2,8 +2,8 @@ import React from "react";
 
 import sunflower from "../../images/sunflower/plant.gif";
 import sunflowerSeedling from "../../images/sunflower/seedling.gif";
-import pumpkin from "../../images/pumpkin/plant.png";
-import pumpkinSeedling from "../../images/pumpkin/seedling.png";
+import pumpkin from "../../images/pumpkin/plant.gif";
+import pumpkinSeedling from "../../images/pumpkin/seedling.gif";
 import beetroot from "../../images/beetroot/plant.gif";
 import beetrootSeedling from "../../images/beetroot/seedling.gif";
 import cauliflower from "../../images/cauliflower/plant.png";
@@ -130,11 +130,11 @@ export const Field: React.FC<Props> = ({
     }
 
     if (square.fruit === Fruit.Pumpkin) {
-      return <img src={pumpkinSeedling} className="seedling" />;
+      return <img src={pumpkinSeedling} className="seedling pumpkin-seedling" />;
     }
 
     if (square.fruit === Fruit.Beetroot) {
-      return <img src={beetrootSeedling} className="seedling" />;
+      return <img src={beetrootSeedling} className="seedling beetroot-seedling" />;
     }
 
     if (square.fruit === Fruit.Cauliflower) {

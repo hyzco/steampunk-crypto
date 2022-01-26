@@ -87,6 +87,16 @@
   z-index: 1;
 }
 
+.beetroot-seedling {
+  width: 90% !important;
+  top: -12px;
+}
+
+.pumpkin-seedling {
+  width: 90% !important;
+  top: -5px;
+}
+
 .cauliflower {
   position: absolute;
   top: 13%;

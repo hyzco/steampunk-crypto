@@ -14,12 +14,17 @@ import grassLeaves1 from "../../images/decorations/grassLeaves1.png";
 import grassLeaves2 from "../../images/decorations/grassLeaves2.png";
 import bridge from "../../images/decorations/bridge.png";
 
+import lamp from "../../images/decorations/lamp.png"
+import bear from "../../images/decorations/bear.png"
+import bench from "../../images/decorations/bench.png"
+
+
 interface Props {}
 
 const fields = [1, 4, 6, 10, 13, 15];
 
 // Repeated decorations to
-const DecorationFiller = () => (
+export const DecorationFiller = () => (
   <>
     {fields.map((position, index) => (
       <>
@@ -29,7 +34,7 @@ const DecorationFiller = () => (
             gridRow: `${index + 3}/${index + 4}`,
           }}
         >
-          {/* <img className="flowers" src={flower1} /> */}
+          <img className="flowers" src={flower1} />
         </div>
 
         <div
@@ -38,7 +43,7 @@ const DecorationFiller = () => (
             gridRow: `${index + 6}/${index + 7}`,
           }}
         >
-          {/* <img className="flowers" src={grassLeaves1} /> */}
+          {/* <img className="flowers" src={lamp} /> */}
         </div>
 
         <div
@@ -84,6 +89,7 @@ export const Tiles: React.FC<Props> = () => {
   return (
     <>
       {/*First to second path*/}
+   
       <div className="dirt" style={{ gridColumn: "4/5", gridRow: "8/9" }} />
       <div className="dirt" style={{ gridColumn: "5/6", gridRow: "8/9" }} />
       <div className="dirt" style={{ gridColumn: "6/7", gridRow: "8/9" }} />
@@ -230,108 +236,103 @@ export const Tiles: React.FC<Props> = () => {
       </div>
 
       <div style={{ gridColumn: "15/16", gridRow: "3/4" }}>
-        <img className="flowers" src={flower2} />
+        <img className="flowers" src={flower1} />
       </div>
       <div style={{ gridColumn: "8/9", gridRow: "3/4" }}>
         <img className="flowers" src={flower1} />
       </div>
       <div style={{ gridColumn: "4/5", gridRow: "4/5" }}>
-        <img className="flowers" src={flower2} />
+        <img className="flowers" src={flower1} />
       </div>
       <div style={{ gridColumn: "2/3", gridRow: "7/8" }}>
-        <img className="flowers" src={flower2} />
+        <img className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "2/3", gridRow: "7/8" }}>
-        <img className="flowers" src={flower2} />
+        <img className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "3/4", gridRow: "2/3" }}>
-        <img className="stump" src={flower1} />
+        <img className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "5/6", gridRow: "10/11" }}>
-        <img className="stump" src={flower1} />
+        <img className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "5/6", gridRow: "3/4" }}>
-         <img className="leaves" src={grassLeaves1} />
+         <img className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "9/10", gridRow: "2/3" }}>
-         <img className="leaves" src={grassLeaves1} />
+         <img className="bear" src={bear} />
       </div>
 
       <div style={{ gridColumn: "14/15", gridRow: "2/3" }}>
-         <img className="leaves" src={grassLeaves1} />
+         <img className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "3/4", gridRow: "7/8" }}>
-         <img className="leaves" src={grassLeaves1} />
+         <img className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "1/2", gridRow: "9/10" }}>
-         <img className="leaves" src={grassLeaves1} />
+         <img className="bear" src={bear} />
       </div>
 
       <div style={{ gridColumn: "5/6", gridRow: "12/13" }}>
-         <img className="leaves" src={grassLeaves1} />
+         {/* <img className="lamp" src={lamp} /> */}
       </div>
 
       <div style={{ gridColumn: "10/11", gridRow: "7/8" }}>
-         <img className="leaves" src={grassLeaves1} />
+         {/* <img className="leaves" src={grassLeaves1} /> */}
       </div>
 
       <div style={{ gridColumn: "1/2", gridRow: "4/5" }}>
-         <img className="leaves" src={grassLeaves2} />
+         {/* <img className="lamp" src={lamp} /> */}
       </div>
 
       <div style={{ gridColumn: "10/11", gridRow: "4/5" }}>
-         <img className="leaves" src={grassLeaves2} />
+         <img className="bench" src={bench} />
       </div>
 
       <div style={{ gridColumn: "7/8", gridRow: "11/12" }}>
-         <img className="leaves" src={grassLeaves2} />
+         {/* <img className="leaves" src={grassLeaves2} /> */}
       </div>
 
       <div style={{ gridColumn: "11/12", gridRow: "11/12" }}>
-         <img className="leaves" src={grassLeaves2} />
+         <img className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "13/14", gridRow: "4/5" }}>
-         <img className="leaves" src={grassLeaves2} />
+         <img className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "15/16", gridRow: "8/9" }}>
-         <img className="leaves" src={grassLeaves2} />
+         {/* <img className="leaves" src={grassLeaves2} /> */}
       </div>
 
       <div style={{ gridColumn: "10/11", gridRow: "6/7" }}>
-        <img className="rock1" src={rock1} />
+        <img className="lamp" src={lamp} />
       </div>
 
-      <div style={{ gridColumn: "6/7", gridRow: "9/10" }}>
-        <img className="rock1" src={rock1} />
-      </div>
+      {/* <div style={{ gridColumn: "6/7", gridRow: "9/10" }}>
+        <img className="bear" src={bear} />
+      </div> */}
 
       <div style={{ gridColumn: "2/3", gridRow: "12/13" }}>
-        <img className="rock1" src={rock2} />
+        <img className="bear" src={bear} />
       </div>
 
       <div style={{ gridColumn: "12/13", gridRow: "12/13" }}>
-        <img className="rock1" src={rock2} />
+        {/* <img className="bear" src={bear} /> */}
       </div>
 
-      <div style={{ gridColumn: "5/6", gridRow: "14/15" }}>
+      <div style={{ gridColumn: "7/8", gridRow: "14/15" }}>
         <img className="bridge" src={bridge} />
       </div>
-
-      <div style={{ gridColumn: "2/3", gridRow: "14/14" }}>
-        <img className="bridge" src={bridge} />
-      </div>
-
-      <div style={{ gridColumn: "7/8", gridRow: "16/15" }}>
-        <img className="bridge" src={bridge} />
+      <div id="environment-top">
+        <DecorationFiller />
       </div>
 
       <div id="environment-left">
@@ -339,6 +340,9 @@ export const Tiles: React.FC<Props> = () => {
       </div>
 
       <div id="environment-right">
+        <DecorationFiller />
+      </div>
+      <div id="environment-bottom">
         <DecorationFiller />
       </div>
     </>

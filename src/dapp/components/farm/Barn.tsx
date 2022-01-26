@@ -16,7 +16,7 @@ import clockwork from "../../images/decorations/clockwork.gif";
 // import cauliflower from '../../images/cauliflower/fruit.png'
 // import potato from '../../images/potato/fruit.gif'
 // import sunflower from '../../images/sunflower/fruit.gif'
-// import pumpkin from '../../images/pumpkin/fruit.png'
+// import pumpkin from '../../images/pumpkin/fruit.gif'
 // import sunflowerPot from '../../images/decorations/sunflower_pot.png'
 
 import { service } from "../../machine";
@@ -113,13 +113,13 @@ export const Barn: React.FC<Props> = ({ farmSize, balance }) => {
       {/* Barn */}
       <div style={{ gridColumn: "12/13", gridRow: "7/8" }}>
         <div id="house">
-          <img id="base" src={base} />
+          <img id="side-house" src={baseLvl3} />
+          <img id="smoke" src={smoke} />
 
           {farmSize > 5 && <img id="level" src={baseLvl2} />}
           {farmSize > 8 && (
             <>
-              <img id="side-house" src={baseLvl3} />
-              <img id="smoke" src={smoke} />
+              <img id="base" src={base} />
             </>
           )}
 
