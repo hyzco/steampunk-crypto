@@ -50,7 +50,7 @@ export const MarketModal: React.FC<Props> = ({ isOpen, onClose }) => {
         <div id="welcome">
           <h1 className="price-header">
             Supply is growing!
-            <img src={alert} className="price-alert" />
+            <img alt="img" src={alert} className="price-alert" />
           </h1>
 
           <div className="current-price-info-container">
@@ -87,7 +87,7 @@ export const MarketModal: React.FC<Props> = ({ isOpen, onClose }) => {
               <div>
                 <h3 className="current-price-header">Current Price</h3>
                 <div className="current-price-container ">
-                  <img className="sunflower-price" src={sunflower} />
+                  <img alt="img" className="sunflower-price" src={sunflower} />
                   <span className="current-price">= {currentPrice} $SFF</span>
                 </div>
               </div>
@@ -96,7 +96,7 @@ export const MarketModal: React.FC<Props> = ({ isOpen, onClose }) => {
                 <div>
                   <h3 className="current-price-header">Upcoming Price</h3>
                   <div className="current-price-container ">
-                    <img className="sunflower-price" src={sunflower} />
+                    <img alt="img" className="sunflower-price" src={sunflower} />
                     <span className="current-price">= {nextPrice} $SFF</span>
                   </div>
                 </div>

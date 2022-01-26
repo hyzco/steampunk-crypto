@@ -38,7 +38,7 @@ const Content: React.FC<Props> = ({ code }) => {
           go through.
         </span>
 
-        <img src={speedUp} id="error-image" />
+        <img alt="img" src={speedUp} id="error-image" />
 
         <span id="error-text">
           Once the transaction is succesful please refresh the page.
@@ -59,7 +59,7 @@ const Content: React.FC<Props> = ({ code }) => {
         <a
           id="error-link"
           href="https://discord.gg/DZWHuhVUGN"
-          target="_blank"
+          // target="_blank"
         >
           faq
         </a>{" "}

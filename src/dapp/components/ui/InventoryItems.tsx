@@ -1,31 +1,28 @@
 import React from "react";
 
-import wood from "../../images/ui/wood.png";
-import stone from "../../images/ui/rock.png";
+// import wood from "../../images/ui/wood.png";
+// import stone from "../../images/ui/rock.png";
 
-import { FruitItem } from "../../types/fruits";
+// import { FruitItem } from "../../types/fruits";
 
 import { Box, Props as BoxProps } from "./Box";
 
 import {
   Inventory,
-  Item,
   ItemName,
   items,
-  Recipe,
-  recipes,
-} from "../../types/crafting";
+} from "../../types/crafting"; // Recipe, recipes, Item,
 
 import "./Inventory.css";
-import {
-  BlockchainEvent,
-  BlockchainState,
-  Context,
-  service,
-} from "../../machine";
-import { useService } from "@xstate/react";
-import { ActionableItem, isFruit } from "../../types/contract";
-import { error } from "console";
+// import {
+//   BlockchainEvent,
+//   BlockchainState,
+//   Context,
+//   service,
+// } from "../../machine";
+// import { useService } from "@xstate/react";
+import { ActionableItem } from "../../types/contract"; // isFruit
+// import { error } from "console";
 
 interface Props {
   selectedItem?: ActionableItem;

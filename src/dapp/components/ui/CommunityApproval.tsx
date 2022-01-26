@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { Panel } from "../ui/Panel";
+// import { Panel } from "../ui/Panel";
 import { Button } from "../ui/Button";
-import { Message } from "../ui/Message";
-import { InventoryItems } from "../ui/InventoryItems";
+// import { Message } from "../ui/Message";
+// import { InventoryItems } from "../ui/InventoryItems";
 
 import {
   Context,
@@ -16,8 +16,8 @@ import matic from "../../images/ui/matic.png";
 import icon from "../../images/ui/icon.png";
 import carry from "../../images/characters/goblin_carry.gif";
 
-import { recipes, Recipe, Inventory, Item } from "../../types/crafting";
-import { Box, BoxProps } from "./Box";
+import { Recipe } from "../../types/crafting"; //  Inventory, Item  recipes
+// import { Box, BoxProps } from "./Box";
 
 import "./Crafting.css";
 import { useService } from "@xstate/react";
@@ -39,12 +39,12 @@ export const CommunityApproval: React.FC<Props> = ({
   const [isApproving, setIsApproving] = useState(false);
   const [isApproved, setIsApproved] = useState(false);
   const [error, setError] = useState("");
-  const [machineState, send] = useService<
+  const [machineState] = useService<
     Context,
     BlockchainEvent,
     BlockchainState
-  >(service);
-  const isUnsaved = machineState.context.blockChain.isUnsaved();
+  >(service); // send
+  // const isUnsaved = machineState.context.blockChain.isUnsaved();
   const sunflowerTokenAmount = recipe.ingredients[0].amount;
 
   const sunflowerTokens = recipe.ingredients[0].amount;
@@ -95,8 +95,8 @@ export const CommunityApproval: React.FC<Props> = ({
             {isApproving && (
               <>
                 <div id="approving-animation">
-                  <img id="approving-goblin" src={carry} />
-                  <img id="approving-sff" src={icon} />
+                  <img alt="img" id="approving-goblin" src={carry} />
+                  <img alt="img" id="approving-sff" src={icon} />
                 </div>
                 <span className="community-guide-text">Approving...</span>
               </>
@@ -117,14 +117,14 @@ export const CommunityApproval: React.FC<Props> = ({
         <span className={`recipe-type recipe-nft`}>NFT</span>
         <span id="recipe-title">{recipe.name}</span>
         <div id="crafting-item">
-          <img src={recipe.image} />
+          <img alt="img" src={recipe.image} />
         </div>
         <span id="recipe-description">{recipe.description}</span>
 
         <div id="ingredients">
           <div className="ingredient">
             <div>
-              <img className="ingredient-image" src={icon} />
+              <img alt="img" className="ingredient-image" src={icon} />
               <span className="ingredient-count">$SFF</span>
             </div>
             <span className={`ingredient-text`}>
@@ -133,7 +133,7 @@ export const CommunityApproval: React.FC<Props> = ({
           </div>
           <div className="ingredient">
             <div>
-              <img className="ingredient-image" src={matic} />
+              <img alt="img" className="ingredient-image" src={matic} />
               <span className="ingredient-count">$MATIC</span>
             </div>
             <span className={`ingredient-text`}>
