@@ -1,17 +1,17 @@
 import React from "react";
 
-import tree from "../../images/decorations/tree.png";
+// import tree from "../../images/decorations/tree.png";
 import woodHorizontal from "../../images/fence/wood_horizontal.png";
 import woodPost from "../../images/fence/wood_post.png";
-import woodHalf from "../../images/fence/wood_half.png";
+// import woodHalf from "../../images/fence/wood_half.png";
 import bucket from "../../images/decorations/bucket.png";
 import flower1 from "../../images/decorations/flower1.png";
-import flower2 from "../../images/decorations/flower2.png";
-import stump from "../../images/decorations/stump.png";
-import rock1 from "../../images/decorations/rock2.png";
-import rock2 from "../../images/decorations/rock3.png";
-import grassLeaves1 from "../../images/decorations/grassLeaves1.png";
-import grassLeaves2 from "../../images/decorations/grassLeaves2.png";
+// import flower2 from "../../images/decorations/flower2.png";
+// import stump from "../../images/decorations/stump.png";
+// import rock1 from "../../images/decorations/rock2.png";
+// import rock2 from "../../images/decorations/rock3.png";
+// import grassLeaves1 from "../../images/decorations/grassLeaves1.png";
+// import grassLeaves2 from "../../images/decorations/grassLeaves2.png";
 import bridge from "../../images/decorations/bridge.png";
 
 import lamp from "../../images/decorations/lamp.png"
@@ -34,7 +34,7 @@ export const DecorationFiller = () => (
             gridRow: `${index + 3}/${index + 4}`,
           }}
         >
-          <img className="flowers" src={flower1} />
+          <img alt="img" className="flowers" src={flower1} />
         </div>
 
         <div
@@ -43,7 +43,7 @@ export const DecorationFiller = () => (
             gridRow: `${index + 6}/${index + 7}`,
           }}
         >
-          {/* <img className="flowers" src={lamp} /> */}
+          {/* <img alt="img" className="flowers" src={lamp} /> */}
         </div>
 
         <div
@@ -52,7 +52,7 @@ export const DecorationFiller = () => (
             gridRow: `${index + 5}/${index + 6}`,
           }}
         >
-           {/* <img className="leaves" src={grassLeaves2} /> */}
+           {/* <img alt="img" className="leaves" src={grassLeaves2} /> */}
         </div>
 
         <div
@@ -61,7 +61,7 @@ export const DecorationFiller = () => (
             gridRow: `${index + 8}/${index + 9}`,
           }}
         >
-           {/* <img className="leaves" src={grassLeaves1} /> */}
+           {/* <img alt="img" className="leaves" src={grassLeaves1} /> */}
         </div>
 
         <div
@@ -70,7 +70,7 @@ export const DecorationFiller = () => (
             gridRow: `${index + 11}/${index + 12}`,
           }}
         >
-          {/* <img className="rock1" src={rock1} /> */}
+          {/* <img alt="img" className="rock1" src={rock1} /> */}
         </div>
 
         <div
@@ -79,7 +79,7 @@ export const DecorationFiller = () => (
             gridRow: `${index + 13}/${index + 14}`,
           }}
         >
-          {/* <img className="rock1" src={rock2} /> */}
+          {/* <img alt="img" className="rock1" src={rock2} /> */}
         </div>
       </>
     ))}
@@ -190,146 +190,146 @@ export const Tiles: React.FC<Props> = () => {
 
       {/* Fence */}
       <div style={{ gridColumn: "7/8", gridRow: "6/7" }}>
-        <img className="fence-horizontal" src={woodHorizontal} />
+        <img alt="img" className="fence-horizontal" src={woodHorizontal} />
       </div>
       <div style={{ gridColumn: "8/9", gridRow: "6/7" }}>
-        <img className="fence-horizontal" src={woodHorizontal} />
+        <img alt="img" className="fence-horizontal" src={woodHorizontal} />
       </div>
       <div style={{ gridColumn: "9/10", gridRow: "6/7" }}>
-        <img className="fence-post" src={woodPost} />
+        <img alt="img" className="fence-post" src={woodPost} />
       </div>
 
       <div style={{ gridColumn: "7/8", gridRow: "10/11" }}>
-        <img className="fence-horizontal" src={woodHorizontal} />
+        <img alt="img" className="fence-horizontal" src={woodHorizontal} />
       </div>
       <div style={{ gridColumn: "8/9", gridRow: "10/11" }}>
-        <img className="fence-horizontal" src={woodHorizontal} />
+        <img alt="img" className="fence-horizontal" src={woodHorizontal} />
       </div>
       <div style={{ gridColumn: "9/10", gridRow: "10/11" }}>
-        <img className="fence-post" src={woodPost} />
+        <img alt="img" className="fence-post" src={woodPost} />
       </div>
 
       {/* <div style={{ gridColumn: "2/3", gridRow: "6/7" }}>
-        <img className="fence-half" src={woodHalf} />
+        <img alt="img" className="fence-half" src={woodHalf} />
       </div>
       <div style={{ gridColumn: "3/4", gridRow: "6/7" }}>
-        <img className="fence-half" src={woodHalf} />
+        <img alt="img" className="fence-half" src={woodHalf} />
       </div>
       <div style={{ gridColumn: "4/5", gridRow: "6/7" }}>
-        <img className="fence-half" src={woodHalf} />
+        <img alt="img" className="fence-half" src={woodHalf} />
       </div>
 
       <div style={{ gridColumn: "2/3", gridRow: "10/11" }}>
-        <img className="fence-half" src={woodHalf} />
+        <img alt="img" className="fence-half" src={woodHalf} />
       </div>
       <div style={{ gridColumn: "3/4", gridRow: "10/11" }}>
-        <img className="fence-half" src={woodHalf} />
+        <img alt="img" className="fence-half" src={woodHalf} />
       </div>
 
       <div style={{ gridColumn: "6/7", gridRow: "4/5" }}>
-        <img className="fence-half" src={woodHalf} />
+        <img alt="img" className="fence-half" src={woodHalf} />
       </div> */}
 
       {/* Decorations */}
       <div style={{ gridColumn: "10", gridRow: "10/11" }}>
-        <img className="bucket" src={bucket} />
+        <img alt="img" className="bucket" src={bucket} />
       </div>
 
       <div style={{ gridColumn: "15/16", gridRow: "3/4" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
       <div style={{ gridColumn: "8/9", gridRow: "3/4" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
       <div style={{ gridColumn: "4/5", gridRow: "4/5" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
       <div style={{ gridColumn: "2/3", gridRow: "7/8" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "2/3", gridRow: "7/8" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "3/4", gridRow: "2/3" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "5/6", gridRow: "10/11" }}>
-        <img className="flowers" src={flower1} />
+        <img alt="img" className="flowers" src={flower1} />
       </div>
 
       <div style={{ gridColumn: "5/6", gridRow: "3/4" }}>
-         <img className="lamp" src={lamp} />
+         <img alt="img" className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "9/10", gridRow: "2/3" }}>
-         <img className="bear" src={bear} />
+         <img alt="img" className="bear" src={bear} />
       </div>
 
       <div style={{ gridColumn: "14/15", gridRow: "2/3" }}>
-         <img className="lamp" src={lamp} />
+         <img alt="img" className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "3/4", gridRow: "7/8" }}>
-         <img className="lamp" src={lamp} />
+         <img alt="img" className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "1/2", gridRow: "9/10" }}>
-         <img className="bear" src={bear} />
+         <img alt="img" className="bear" src={bear} />
       </div>
 
       <div style={{ gridColumn: "5/6", gridRow: "12/13" }}>
-         {/* <img className="lamp" src={lamp} /> */}
+         {/* <img alt="img" className="lamp" src={lamp} /> */}
       </div>
 
       <div style={{ gridColumn: "10/11", gridRow: "7/8" }}>
-         {/* <img className="leaves" src={grassLeaves1} /> */}
+         {/* <img alt="img" className="leaves" src={grassLeaves1} /> */}
       </div>
 
       <div style={{ gridColumn: "1/2", gridRow: "4/5" }}>
-         {/* <img className="lamp" src={lamp} /> */}
+         {/* <img alt="img" className="lamp" src={lamp} /> */}
       </div>
 
       <div style={{ gridColumn: "10/11", gridRow: "4/5" }}>
-         <img className="bench" src={bench} />
+         <img alt="img" className="bench" src={bench} />
       </div>
 
       <div style={{ gridColumn: "7/8", gridRow: "11/12" }}>
-         {/* <img className="leaves" src={grassLeaves2} /> */}
+         {/* <img alt="img" className="leaves" src={grassLeaves2} /> */}
       </div>
 
       <div style={{ gridColumn: "11/12", gridRow: "11/12" }}>
-         <img className="lamp" src={lamp} />
+         <img alt="img" className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "13/14", gridRow: "4/5" }}>
-         <img className="lamp" src={lamp} />
+         <img alt="img" className="lamp" src={lamp} />
       </div>
 
       <div style={{ gridColumn: "15/16", gridRow: "8/9" }}>
-         {/* <img className="leaves" src={grassLeaves2} /> */}
+         {/* <img alt="img" className="leaves" src={grassLeaves2} /> */}
       </div>
 
       <div style={{ gridColumn: "10/11", gridRow: "6/7" }}>
-        <img className="lamp" src={lamp} />
+        <img alt="img" className="lamp" src={lamp} />
       </div>
 
       {/* <div style={{ gridColumn: "6/7", gridRow: "9/10" }}>
-        <img className="bear" src={bear} />
+        <img alt="img" className="bear" src={bear} />
       </div> */}
 
       <div style={{ gridColumn: "2/3", gridRow: "12/13" }}>
-        <img className="bear" src={bear} />
+        <img alt="img" className="bear" src={bear} />
       </div>
 
       <div style={{ gridColumn: "12/13", gridRow: "12/13" }}>
-        {/* <img className="bear" src={bear} /> */}
+        {/* <img alt="img" className="bear" src={bear} /> */}
       </div>
 
       <div style={{ gridColumn: "7/8", gridRow: "14/15" }}>
-        <img className="bridge" src={bridge} />
+        <img alt="img" className="bridge" src={bridge} />
       </div>
       <div id="environment-top">
         <DecorationFiller />

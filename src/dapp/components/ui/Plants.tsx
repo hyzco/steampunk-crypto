@@ -3,8 +3,8 @@ import React from "react";
 import coin from "../../images/ui/icon.png";
 import stopwatch from "../../images/ui/stopwatch.png";
 
-import { FruitItem, getFruit } from "../../types/fruits";
-import { ActionableItem, Fruit, isFruit } from "../../types/contract";
+import { FruitItem } from "../../types/fruits"; // getFruit
+import { ActionableItem, isFruit } from "../../types/contract"; // Fruit
 
 import { Box } from "./Box";
 
@@ -45,14 +45,14 @@ export const Plants: React.FC<Props> = ({
                 isSelected={fruit.fruit === plant.fruit}
                 onClick={() => onSelectItem(fruit)}
               >
-                <img src={fruit.image} className="box-item" />
+                <img alt="img" src={fruit.image} className="box-item" />
               </Box>
             )
           )}
         </div>
         <a
           href="https://docs.sunflower-farmers.com/plant-guide"
-          target="_blank"
+          // target="_blank"
         >
           <h3 className="current-price-supply-demand">Read more</h3>
         </a>
@@ -62,13 +62,13 @@ export const Plants: React.FC<Props> = ({
           <>
             <span id="recipe-title">{plant.name}</span>
             <div id="crafting-item">
-              <img src={plant.image} />
+              <img alt="img" src={plant.image} />
             </div>
 
             <div id="ingredients">
               <div className="ingredient">
                 <div>
-                  <img className="ingredient-image" src={stopwatch} />
+                  <img alt="img" className="ingredient-image" src={stopwatch} />
                   <span className="ingredient-count">Time</span>
                 </div>
                 <span className="ingredient-text">
@@ -76,7 +76,7 @@ export const Plants: React.FC<Props> = ({
                 </span>
               </div>
               <div id="plant-to-harvest">
-                <img className="ingredient-image" src={coin} />
+                <img alt="img" className="ingredient-image" src={coin} />
                 <span>Prices</span>
               </div>
 

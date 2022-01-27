@@ -45,7 +45,7 @@ export const FourthBlock: React.FC<Props> = ({
           />
         ) : (
           <div className="field">
-            <img src={soil} />
+            <img alt="img" src={soil} />
           </div>
         )}
       </div>
@@ -64,7 +64,7 @@ export const FourthBlock: React.FC<Props> = ({
           />
         ) : (
           <div className="field">
-            <img src={soil} />
+            <img alt="img" src={soil} />
           </div>
         )}
       </div>
@@ -84,7 +84,7 @@ export const FourthBlock: React.FC<Props> = ({
           />
         ) : (
           <div className="field">
-            <img src={soil} />
+            <img alt="img" src={soil} />
           </div>
         )}
       </div>

@@ -53,9 +53,9 @@ export const Farm: React.FC = () => {
   const [totalItemSupplies, setTotalItemSupplies] =
     React.useState<Inventory>(DEFAULT_INVENTORY);
 
-  const [supply, setSupply] = React.useState<Supply>({
-    statue: 0,
-  });
+  // const [supply, setSupply] = React.useState<Supply>({
+  //   statue: 0,
+  // });
 
   const farmIsFresh = React.useRef(false);
   const accountId = React.useRef<string>();
@@ -183,7 +183,7 @@ export const Farm: React.FC = () => {
 
       send("HARVEST");
     },
-    [balance, fruits, land, machineState.context.blockChain, send]
+    [balance, fruits, land, machineState.context.blockChain, send, selectedItem]
   );
 
   const onPlant = React.useCallback(
@@ -273,7 +273,7 @@ export const Farm: React.FC = () => {
             }
           >
             About
-            <img src={questionMark} id="question" />
+            <img alt="img" src={questionMark} id="question" />
           </Button>
         </Panel>
       </span>
@@ -281,7 +281,7 @@ export const Farm: React.FC = () => {
       <div id="balance">
         <Panel>
           <div id="inner">
-            <img src={coin} />
+            <img alt="img" src={coin} />
             {machineState.context.blockChain.isConnected &&
               safeBalance.toFixed(3)}
           </div>

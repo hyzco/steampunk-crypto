@@ -101,7 +101,7 @@ export const CraftingMenu: React.FC<Props> = ({
         <div className="upgrade-required">
           <Message>
             Save your farm first
-            <img
+            <img alt="img"
               //src={cancel}
               className="insufficient-funds-cross"
             />
@@ -124,14 +124,14 @@ export const CraftingMenu: React.FC<Props> = ({
             <Message>{amount}</Message>
             {selectedRecipe.type === "ERC20" && (
               <div id="arrow-container">
-                <img
+                <img alt="img"
                   className="craft-arrow"
                   alt="Step up donation value"
                   src={arrowUp}
                   onClick={() => setAmount((r) => r + 1)}
                 />
                 {amount > 1 && (
-                  <img
+                  <img alt="img"
                     className="craft-arrow"
                     alt="Step down donation value"
                     src={arrowDown}
@@ -159,7 +159,7 @@ export const CraftingMenu: React.FC<Props> = ({
     <div id="crafting">
       <div id="crafting-left">
         <div id="inventory-header">
-          <img src={hammer} />
+          <img alt="img" src={hammer} />
           <span>Recipes</span>
         </div>
         <div id="crafting-items">
@@ -174,7 +174,7 @@ export const CraftingMenu: React.FC<Props> = ({
           ))}
         </div>
         <div id="inventory-header">
-          <img src={basket} />
+          <img alt="img" src={basket} />
           <span>Inventory</span>
         </div>
         <div id="inventory">
@@ -200,7 +200,7 @@ export const CraftingMenu: React.FC<Props> = ({
         )}
         <span id="recipe-title">{selectedRecipe.name}</span>
         <div id="crafting-item">
-          <img src={selectedRecipe.image} />
+          <img alt="img" src={selectedRecipe.image} />
         </div>
         <span id="recipe-description">{selectedRecipe.description}</span>
 
@@ -208,7 +208,7 @@ export const CraftingMenu: React.FC<Props> = ({
           {ingredientList.map((ingredient) => (
             <div className="ingredient">
               <div>
-                <img className="ingredient-image" src={ingredient.image} />
+                <img alt="img" className="ingredient-image" src={ingredient.image} />
                 <span className="ingredient-count">{ingredient.name}</span>
               </div>
               <span
@@ -224,7 +224,7 @@ export const CraftingMenu: React.FC<Props> = ({
         {selectedRecipe.farmLevel && (
           <div className="ingredient">
             <div>
-              <img className="ingredient-image" src={building} />
+              <img alt="img" className="ingredient-image" src={building} />
               <span className="ingredient-count">Farm level</span>
             </div>
             <span

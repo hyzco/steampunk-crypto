@@ -17,7 +17,7 @@ export const TimerComplete: React.FC = () => {
         <Panel>
             <div id="timer-complete">
 
-                <img src={alert} />
+                <img alt="img" src={alert} />
 
                 <h4>Times up...</h4>
                 

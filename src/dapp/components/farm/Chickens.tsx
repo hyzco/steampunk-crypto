@@ -72,31 +72,31 @@ export const Chickens: React.FC<Props> = ({ inventory }) => {
     <>
       <div id="chicken-coop" onClick={() => setShowModal(true)}>
         {inventory && (inventory["Chicken coop"] > 0 && (
-          <img src={chickenCoop} alt="coop" />
+          <img alt="img" src={chickenCoop} alt="coop" />
         ))}
         <div>
           {inventory && (inventory["Golden Egg"] > 0 && (
-            <img src={goldEgg} id="gold-egg" alt="goldEgg" />
+            <img alt="img" src={goldEgg} id="gold-egg" alt="goldEgg" />
           ))}
           {inventory && (inventory["Chicken"] > 0 && (
             <>
-              {!timeTillHatch && <img id="egg-1" src={egg} alt="egg" />}
+              {!timeTillHatch && <img alt="img" id="egg-1" src={egg} alt="egg" />}
               <div className="game-object chicken walking one">
-                <img src={walkingChicken} alt="walking-chicken" />
+                <img alt="img" src={walkingChicken} alt="walking-chicken" />
               </div>
             </>
           ))}
           {inventory && (inventory["Chicken"] > 1 && (
             <>
-              {!timeTillHatch && <img id="egg-2" src={egg} alt="egg" />}
+              {!timeTillHatch && <img alt="img" id="egg-2" src={egg} alt="egg" />}
               <div className="game-object chicken walking two">
-                <img src={walkingChicken} alt="walking-chicken" />
+                <img alt="img" src={walkingChicken} alt="walking-chicken" />
               </div>
             </>
           ))}
           {inventory && (inventory["Chicken"] > 2 && (
             <div className="game-object chicken walking three">
-              <img src={walkingChicken} alt="walking-chicken" />
+              <img alt="img" src={walkingChicken} alt="walking-chicken" />
             </div>
           ))}
         </div>
@@ -111,7 +111,8 @@ export const Chickens: React.FC<Props> = ({ inventory }) => {
         >
           <Panel>
             <div className="gather-panel">
-              <img
+              <img alt="img"
+                alt="img"
                 src={closeIcon}
                 className="gather-close-icon"
                 onClick={() => setShowModal(false)}
@@ -121,7 +122,7 @@ export const Chickens: React.FC<Props> = ({ inventory }) => {
                 <span className="resource-title">
                   Collect Chicken Eggs
                 </span>
-                <img src={egg} className="resource-image" />
+                <img alt="img" src={egg} alt="img" className="resource-image" />
                 <span
                   className="resource-description"
                   style={{ marginBottom: "1rem" }}
@@ -133,7 +134,7 @@ export const Chickens: React.FC<Props> = ({ inventory }) => {
                 {inventory && (!inventory["Chicken"] ? (
                   <Message>
                     You need a{" "}
-                    <img src={chicken} className="required-tool" />
+                    <img alt="img" src={chicken} alt="img" className="required-tool" />
                   </Message>
                 ) : timeTillHatch ? (
                   <Message>Eggs will be ready in {timeTillHatch}</Message>
@@ -152,7 +153,7 @@ export const Chickens: React.FC<Props> = ({ inventory }) => {
                 ))}
                 <a
                   href="https://docs.sunflower-farmers.com/resources"
-                  target="_blank"
+                  // target="_blank"
                 >
                   <h3 className="current-price-supply-demand">
                     Read more

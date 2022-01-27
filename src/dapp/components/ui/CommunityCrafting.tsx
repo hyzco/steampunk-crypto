@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react"; // useState
 
-import { Panel } from "../ui/Panel";
+// import { Panel } from "../ui/Panel";
 import { Button } from "../ui/Button";
 import { Message } from "../ui/Message";
-import { InventoryItems } from "../ui/InventoryItems";
+// import { InventoryItems } from "../ui/InventoryItems";
 
 import {
   Context,
@@ -12,12 +12,12 @@ import {
   service,
 } from "../../machine";
 
-import hammer from "../../images/ui/hammer.png";
-import basket from "../../images/ui/basket.png";
-import building from "../../images/buildings/side-house-2.png";
+// import hammer from "../../images/ui/hammer.png";
+// import basket from "../../images/ui/basket.png";
+// import building from "../../images/buildings/side-house-2.png";
 
-import arrowUp from "../../images/ui/arrow_up.png";
-import arrowDown from "../../images/ui/arrow_down.png";
+// import arrowUp from "../../images/ui/arrow_up.png";
+// import arrowDown from "../../images/ui/arrow_down.png";
 import matic from "../../images/ui/matic.png";
 import discord from "../../images/ui/discord.jpeg";
 import coin from "../../images/ui/icon.png";
@@ -56,17 +56,17 @@ export const CommunityCrafting: React.FC<Props> = ({
   totalItemSupplies,
   level,
 }) => {
-  const [amount, setAmount] = React.useState(1);
+  const [amount ,setAmount] = React.useState(1);
   const [quickSwapRate, setQuickSwapRate] = React.useState(0);
   const [isApproving, setIsApproving] = React.useState(false);
   const [selectedRecipe, setSelectedRecipe] = React.useState(
     COMMUNITY_RECIPES[0]
   );
-  const [machineState, send] = useService<
+  const [machineState] = useService<
     Context,
     BlockchainEvent,
     BlockchainState
-  >(service);
+  >(service); // send
   const isUnsaved = machineState.context.blockChain.isUnsaved();
 
   // Every 10 seconds fetch the quickswap rate
@@ -86,7 +86,7 @@ export const CommunityCrafting: React.FC<Props> = ({
     }, 10 * 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  });
   const changeRecipe = (recipe: Recipe) => {
     setAmount(1);
     setSelectedRecipe(recipe);
@@ -136,7 +136,7 @@ export const CommunityCrafting: React.FC<Props> = ({
         <div className="upgrade-required">
           <Message>
             Save your farm first
-            <img
+            <img alt={amount}
               //src={cancel}
               className="insufficient-funds-cross"
             />
@@ -191,7 +191,7 @@ export const CommunityCrafting: React.FC<Props> = ({
         <div id="community-footer">
           <a
             href="https://docs.sunflower-farmers.com/crafting-guide#crowd-sourced-crafting"
-            target="_blank"
+            // target="_blank"
           >
             <h3 className="current-price-supply-demand">Read more</h3>
           </a>
@@ -204,14 +204,14 @@ export const CommunityCrafting: React.FC<Props> = ({
         )}
         <span id="recipe-title">{selectedRecipe.name}</span>
         <div id="crafting-item">
-          <img src={selectedRecipe.image} />
+          <img alt="img" src={selectedRecipe.image} />
         </div>
         <span id="recipe-description">{selectedRecipe.description}</span>
 
         <div id="ingredients">
           <div className="ingredient">
             <div>
-              <img className="ingredient-image" src={coin} />
+              <img alt="img" className="ingredient-image" src={coin} />
               <span className="ingredient-count">$SFF</span>
             </div>
             <span
@@ -224,7 +224,7 @@ export const CommunityCrafting: React.FC<Props> = ({
           </div>
           <div className="ingredient">
             <div>
-              <img className="ingredient-image" src={matic} />
+              <img alt="img" className="ingredient-image" src={matic} />
               <span className="ingredient-count">$MATIC</span>
             </div>
             <span className={`ingredient-text`}>
@@ -237,7 +237,7 @@ export const CommunityCrafting: React.FC<Props> = ({
         <span id="recipe-description">
           {selectedRecipe.communityMember.twitterLink && (
             <a
-              target="_blank"
+              // target="_blank"
               href={selectedRecipe.communityMember.twitterLink}
               style={{ color: "white", textDecoration: "underline" }}
             >
@@ -247,7 +247,7 @@ export const CommunityCrafting: React.FC<Props> = ({
           <div>
             {selectedRecipe.communityMember.discordName && (
               <span id="discord">
-                <img src={discord} />
+                <img alt="img" src={discord} />
                 {`@${selectedRecipe.communityMember.discordName}`}
               </span>
             )}
@@ -255,7 +255,7 @@ export const CommunityCrafting: React.FC<Props> = ({
         </span>
         <span id="recipe-description">
           <a
-            target="_blank"
+            // target="_blank"
             href={selectedRecipe.openSeaLink}
             style={{ color: "white", textDecoration: "underline" }}
           >
