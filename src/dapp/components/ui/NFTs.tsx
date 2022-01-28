@@ -83,7 +83,7 @@ export const NFTs: React.FC<Props> = ({
 
   const ingredientList = selectedRecipe.ingredients.map((ingredient) => {
     const inventoryCount =
-      ingredient.name === "$SFF" ? balance : inventory[ingredient.name];
+      ingredient.name === "$SPM" ? balance : inventory[ingredient.name];
     const price = ingredient.amount * amount;
     return {
       name: ingredient.name,

@@ -481,7 +481,7 @@ export class BlockChain {
     this.inventory[recipe.name] += amount;
 
     recipe.ingredients.forEach((ingredient) => {
-      if (ingredient.name === "$SFF") {
+      if (ingredient.name === "$SPM") {
         this.details = {
           ...this.details,
           balance: this.details.balance - ingredient.amount * amount,
@@ -539,7 +539,7 @@ export class BlockChain {
     this.inventory[recipe.name] += amount;
 
     recipe.ingredients.forEach((ingredient) => {
-      if (ingredient.name === "$SFF") {
+      if (ingredient.name === "$SPM") {
         this.details = {
           ...this.details,
           balance: this.details.balance - ingredient.amount * amount,

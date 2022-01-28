@@ -77,7 +77,7 @@ export const Tools: React.FC<Props> = ({
 
   const ingredientList = selectedRecipe.ingredients.map((ingredient) => {
     const inventoryCount =
-      ingredient.name === "$SFF" ? balance : inventory[ingredient.name];
+      ingredient.name === "$SPM" ? balance : inventory[ingredient.name];
     const price = ingredient.amount * amount;
     return {
       name: ingredient.name,
@@ -142,7 +142,7 @@ export const Tools: React.FC<Props> = ({
     <div id="crafting">
       <div id="crafting-left">
         <div id="crafting-items">
-          {boxes.map((box) => (
+          {/* {boxes.map((box) => (
             <Box
               count={box.count}
               onClick={box.onClick}
@@ -150,23 +150,25 @@ export const Tools: React.FC<Props> = ({
               isSelected={box.isSelected}
               disabled={box.disabled}
             />
-          ))}
+          ))} */}
         </div>
-        <div id="inventory-header">
+        {/* <div id="inventory-header">
           <img alt="img" src={basket} />
           <span>Inventory</span>
         </div>
         <div id="inventory">
           <InventoryItems inventory={inventory} />
-        </div>
-        <a
+        </div> */}
+        {/* <a
           href="https://docs.sunflower-farmers.com/crafting-guide"
-          // target="_blank"
-        >
-          <h3 className="current-price-supply-demand">Read more</h3>
-        </a>
+          target="_blank"
+        > */}
+        <div className="lottery-container">
+          <h3 className="current-price-supply-demand">Coming Soon</h3>
+        </div>
+        {/* </a> */}
       </div>
-      <div id="recipe">
+      {/* <div id="recipe">
         <span className={`recipe-type recipe-erc20`}>ERC20</span>
         <span id="recipe-title">{selectedRecipe.name}</span>
         <div id="crafting-item">
@@ -192,7 +194,7 @@ export const Tools: React.FC<Props> = ({
           ))}
         </div>
         <div id="craft-action">{Action()}</div>
-      </div>
+      </div> */}
     </div>
   );
 };
