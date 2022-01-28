@@ -12,7 +12,7 @@ export const Crafting: React.FC = () => (
       <h6>Miners are working hard to save your items to the blockchain.</h6>
 
       <div id="mining-animation">
-        <img id="crafting-gif" src={person} />
+        <img alt="img" id="crafting-gif" src={person} />
       </div>
 
       <span>Increase the gas price for faster transactions</span>

@@ -39,12 +39,21 @@ export const Reward: React.FC<Props> = ({ account }) => {
 
     React.useEffect(() => {
         const load = async () => {
-            const reward = await machineState.context.blockChain.getReward()
-            setReward(reward)
+            let reward:any;
+            try {
+                reward = await machineState.context.blockChain.getReward()
+                if(!reward){
+                    console.log('error');
+                }
+            }catch(e){
+                console.log(e);
+            }finally{
+                setReward(reward)                
+            }
         }
 
         if (account) {
-            load()
+            load().then().catch(e => {console.log(e)})
 
             setIsCollected(false)
         }
@@ -61,7 +70,7 @@ export const Reward: React.FC<Props> = ({ account }) => {
 
             {/* Present */}
             <div style={{ gridColumn: '12/13', gridRow: '9/10'}}>
-                <img id='present' src={present} onClick={onUpgrade} />
+                <img alt="img" id='present' src={present} onClick={onUpgrade} />
             </div>
         </>
     )

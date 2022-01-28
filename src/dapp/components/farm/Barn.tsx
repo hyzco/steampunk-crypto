@@ -113,20 +113,20 @@ export const Barn: React.FC<Props> = ({ farmSize, balance }) => {
       {/* Barn */}
       <div style={{ gridColumn: "12/13", gridRow: "7/8" }}>
         <div id="house">
-          <img id="side-house" src={baseLvl3} />
-          <img id="smoke" src={smoke} />
+          <img alt="img" id="side-house" src={baseLvl3} />
+          <img alt="img" id="smoke" src={smoke} />
 
-          {farmSize > 5 && <img id="level" src={baseLvl2} />}
+          {farmSize > 5 && <img alt="img" id="level" src={baseLvl2} />}
           {farmSize > 8 && (
             <>
-              <img id="base" src={base} />
+              <img alt="img" id="base" src={base} />
             </>
           )}
 
-          {farmSize === 14 && <img id="side-house2" src={baseLvl4} />}
+          {farmSize === 14 && <img alt="img" id="side-house2" src={baseLvl4} />}
           {farmSize === 17 && [
-            <img id="level2" src={levels} />,
-            <img id="level2-roof" src={roof} />,
+            <img alt="img" id="level2" src={levels} />,
+            <img alt="img" id="level2-roof" src={roof} />,
           ]}
         </div>
         {farmSize < 17 && <Pickaxe className="loop" onClick={onUpgrade} />}
@@ -136,29 +136,29 @@ export const Barn: React.FC<Props> = ({ farmSize, balance }) => {
           farmSize={farmSize}
           balance={balance}
         />
-        <img id="clockwork" src={clockwork} title="Batunun Anıtı" />
+        <img alt="img" id="clockwork" src={clockwork} title="Batunun Anıtı" />
       </div>
 
       {/* Barn Decorations */}
       <div style={{ gridColumn: "10/11", gridRow: "8/9" }}>
-        <img id="box1" src={box} />
-        {/* <img id='cauliflower-box' src={cauliflower} /> */}
+        <img alt="img" id="box1" src={box} />
+        {/* <img alt="img" id='cauliflower-box' src={cauliflower} /> */}
       </div>
       <div style={{ gridColumn: "11/12", gridRow: "9/10" }}>
-        <img id="box2" src={box} />
-        {/* <img id='potato-box-1' src={potato} />
-                <img id='potato-box-2' src={potato} /> */}
+        <img alt="img" id="box2" src={box} />
+        {/* <img alt="img" id='potato-box-1' src={potato} />
+                <img alt="img" id='potato-box-2' src={potato} /> */}
       </div>
 
       <div style={{ gridColumn: "14/15", gridRow: "9/10" }}>
-        <img id="box2" src={box} />
-        {/* <img id='sunflower-box-1' src={sunflower} />
-                <img id='sunflower-box-2' src={sunflower} /> */}
+        <img alt="img" id="box2" src={box} />
+        {/* <img alt="img" id='sunflower-box-1' src={sunflower} />
+                <img alt="img" id='sunflower-box-2' src={sunflower} /> */}
       </div>
       <div style={{ gridColumn: "14/15", gridRow: "9/10" }}>
-        <img id="box1" src={box} />
-        {/* <img id='pumpkin-box-1' src={pumpkin} />
-                <img id='pumpkin-box-2' src={pumpkin} /> */}
+        <img alt="img" id="box1" src={box} />
+        {/* <img alt="img" id='pumpkin-box-1' src={pumpkin} />
+                <img alt="img" id='pumpkin-box-2' src={pumpkin} /> */}
       </div>
     </>
   );

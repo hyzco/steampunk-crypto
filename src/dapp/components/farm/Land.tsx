@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Land.css";
 
-import { Square, Fruit, ActionableItem } from "../../types/contract";
+import { Square, ActionableItem } from "../../types/contract"; // Fruit
 
 import waterEdge from "../../images/water/edge.png";
 import bone from "../../images/decorations/water/bone.png";
@@ -16,21 +16,21 @@ import { ThirdBlock } from "./ThirdBlock";
 import { FourthBlock } from "./FourthBlock";
 import { FifthBlock } from "./FifthBlock";
 import { Tiles } from "./Tiles";
-import { Trees } from "./NewTrees";
-import { Stones } from "./NewStone";
-import { NFTs } from "./NFTs";
-import { Chickens } from "./Chickens";
-import { Iron } from "./Iron";
-import { Gold } from "./Gold";
+// import { Trees } from "./NewTrees";
+// import { Stones } from "./NewStone";
+// import { NFTs } from "./NFTs";
+// import { Chickens } from "./Chickens";
+// import { Iron } from "./Iron";
+// import { Gold } from "./Gold";
 import { Barn } from "./Barn";
-import { Blacksmith } from "./Blacksmith";
+// import { Blacksmith } from "./Blacksmith";
 import { Machine } from "./Machine";
 import { Market } from "./Market";
 import { Reward } from "./Reward";
 import { FruitItem } from "../../types/fruits";
-import { Inventory, Supply } from "../../types/crafting";
+import { Inventory } from "../../types/crafting";  //Supply
 
-import bridge from "../../images/decorations/bridge.png";
+// import bridge from "../../images/decorations/bridge.png";
 
 
 interface Props {
@@ -104,7 +104,7 @@ export const Land: React.FC<Props> = ({
         )
       )}
         {/* {new Array(50).fill(null).map((_, index) => (
-        <img
+        <img alt="img"
           className="water-edge"
           src={waterEdge}
           style={{
@@ -181,7 +181,7 @@ export const Land: React.FC<Props> = ({
         />
         <Market />
         <Tiles />
-        <Reward account={account} />
+        {/* <Reward account={account} /> */}
 
         {/* {
                     land.map((square, index) => (
@@ -191,7 +191,7 @@ export const Land: React.FC<Props> = ({
         </div>
       
       {new Array(50).fill(null).map((_, index) => (
-        <img
+        <img alt="img"
           className="water-edge"
           src={waterEdge}
           style={{
@@ -202,7 +202,7 @@ export const Land: React.FC<Props> = ({
       ))}
       {/* whell */}
      
-      <img
+      <img alt="img"
         className="wheel"
         src={wheel1}
         style={{
@@ -211,7 +211,7 @@ export const Land: React.FC<Props> = ({
           top: `${800 + topRandomStraight}px`,
         }}
       />
-      <img
+      <img alt="img"
         className="wheel"
         src={whellHalf}
         style={{
@@ -220,7 +220,7 @@ export const Land: React.FC<Props> = ({
           top: `${800 + topRandomHalf}px`,
         }}
       />
-      <img
+      <img alt="img"
         className="wheel"
         src={whellHalf2}
         style={{
@@ -229,7 +229,7 @@ export const Land: React.FC<Props> = ({
           top: `${800 + topRandomHalf2}px`,
         }}
       />
-      <img
+      <img alt="img"
         className="bone"
         src={bone}
         style={{
@@ -238,7 +238,7 @@ export const Land: React.FC<Props> = ({
           top: `${800 + 2}px`,
         }}
       />
-      <img
+      <img alt="img"
         className="bone"
         src={bone}
         style={{
@@ -247,7 +247,7 @@ export const Land: React.FC<Props> = ({
           top: "841px",
         }}
       />
-      <img
+      <img alt="img"
         className="bone"
         src={bone}
         style={{

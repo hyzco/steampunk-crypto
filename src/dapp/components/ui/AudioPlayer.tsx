@@ -55,29 +55,29 @@ export const AudioPlayer: React.FC = () => {
                  left: onHover ? "8px":"-255px"
              }}
         >
-            <img id="note" src={note} alt="musical note"
+            <img alt="img" id="note" src={note} 
                  style={{
                      right: onHover ? "90px": "-90px",
                      opacity:onHover ? 0 : 1
                  }}
             />
             <audio ref={file} id='audio-player' loop controls autoPlay src={playlist[music].file} />
-            <img id="panel-left-edge" src={leftEdgeInner} />
-            <img id="panel-right-edge" src={rightEdgeInner} />
-            <img id="panel-bottom-edge" src={bottomEdgeInner} />
-            <img id="panel-top-edge" src={topEdgeInner} />
-            <img id="panel-top-left" src={topLeftInner} />
-            <img id="panel-bottom-left" src={bottomLeftInner} />
-            <img id="panel-bottom-right" src={bottomRightInner} />
-            <img id="panel-top-right" src={topRightInner} />
+            <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
+            <img alt="img" id="panel-right-edge" src={rightEdgeInner} />
+            <img alt="img" id="panel-bottom-edge" src={bottomEdgeInner} />
+            <img alt="img" id="panel-top-edge" src={topEdgeInner} />
+            <img alt="img" id="panel-top-left" src={topLeftInner} />
+            <img alt="img" id="panel-bottom-left" src={bottomLeftInner} />
+            <img alt="img" id="panel-bottom-right" src={bottomRightInner} />
+            <img alt="img" id="panel-top-right" src={topRightInner} />
             <div id="display-song">
                 <div id="song-name">
                     {playlist[music].name + " - " + playlist[music].artist}
                 </div>
             </div>
             <div id="controls">
-                <img onClick={()=> togglePlayStop()} id="play-pause" src={isPlaying ? pause : play} alt=""/>
-                <img onClick={()=> handleNext()} id="next" src={next} alt="next song"/>
+                <img alt="img" onClick={()=> togglePlayStop()} id="play-pause" src={isPlaying ? pause : play} />
+                <img alt="img" onClick={()=> handleNext()} id="next" src={next} />
                 <input type="range" defaultValue={50} min={0} max={100} onChange={e=> setVolume(Number(e.target.value)/100)} id="volume" />
             </div>
 

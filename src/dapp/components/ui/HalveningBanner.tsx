@@ -50,7 +50,7 @@ export const Banner: React.FC = () => {
 
   return (
     <div id="halvening-banner">
-      <img src={alert} />
+      <img alt="img" src={alert} />
       <div>
         <span>
           When total supply reaches{" "}
@@ -65,7 +65,7 @@ export const Banner: React.FC = () => {
           Read more
         </a>
       </div>
-      <img
+      <img alt="img"
         src={closeIcon}
         id="banner-close"
         onClick={() => setShow(false)}

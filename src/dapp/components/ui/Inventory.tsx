@@ -2,14 +2,12 @@ import React from "react";
 
 import { FruitItem } from "../../types/fruits";
 
-import { ActionableItem, isFruit } from "../../types/contract";
+import { ActionableItem } from "../../types/contract"; // isFruit
 import {
   Inventory as InventorySupply,
   Item,
   items,
-  Recipe,
-  recipes,
-} from "../../types/crafting";
+} from "../../types/crafting"; //  Recipe, recipes,
 
 import { InventoryItems } from "./InventoryItems";
 import "./Inventory.css";
@@ -41,7 +39,7 @@ export const Inventory: React.FC<Props> = ({
         />
         <a
           href="https://docs.sunflower-farmers.com/crafting-guide"
-          target="_blank"
+          // target="_blank"
         >
           <h3 className="current-price-supply-demand">Read more</h3>
         </a>
@@ -51,7 +49,7 @@ export const Inventory: React.FC<Props> = ({
           <span className="recipe-type">{item.type}</span>
           <span id="recipe-title">{item.name}</span>
           <div id="crafting-item">
-            <img src={item.image} />
+            <img alt="img" src={item.image} />
           </div>
 
           <span id="recipe-description">{item.description}</span>

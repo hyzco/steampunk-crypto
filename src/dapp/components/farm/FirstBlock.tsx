@@ -81,7 +81,7 @@ export const FirstBlock: React.FC<Props> = ({
         className="dirt"
         style={{ gridColumn: "8/9", gridRow: "7/8" }}
       >
-        {showWatering && <img id="watering" src={watering} />}
+        {showWatering && <img alt="img" id="watering" src={watering} />}
         <Field
           fruits={fruits}
           balance={balance}
