@@ -44,7 +44,8 @@ export const Blacksmith: React.FC<Props> = ({
     <>
       <Modal centered show={showModal} onHide={() => setShowModal(false)}>
         <Panel hasTabs>
-          <img
+          <img alt="img"
+            alt="img"
             src={close}
             className="close-icon"
             onClick={() => setShowModal(false)}
@@ -56,15 +57,15 @@ export const Blacksmith: React.FC<Props> = ({
               }`}
               onClick={() => setTab("Craft")}
             >
-              <img src={hammer} alt="basket" className="tab-icon" />
+              <img alt="img" src={hammer} alt="basket" className="tab-icon" />
               <span>Craft</span>
               {tab === "Craft" && (
                 <>
-                  <img id="panel-left-edge" src={leftEdgeInner} />
-                  <img id="panel-right-edge" src={rightEdgeInner} />
-                  <img id="panel-top-edge" src={topEdgeInner} />
-                  <img id="panel-top-left" src={topLeftInner} />
-                  <img id="panel-top-right" src={topRightInner} />
+                  <img alt="img" id="panel-left-edge" alt="img" src={leftEdgeInner} />
+                  <img alt="img" id="panel-right-edge" alt="img" src={rightEdgeInner} />
+                  <img alt="img" id="panel-top-edge" alt="img" src={topEdgeInner} />
+                  <img alt="img" id="panel-top-left" alt="img" src={topLeftInner} />
+                  <img alt="img" id="panel-top-right" alt="img" src={topRightInner} />
                 </>
               )}
             </div>
@@ -73,15 +74,15 @@ export const Blacksmith: React.FC<Props> = ({
               className={`inventory-tab ${tab === "NFTs" && "active-tab"}`}
               onClick={() => setTab("NFTs")}
             >
-              <img src={gold} alt="basket" className="tab-icon" />
+              <img alt="img" src={gold} alt="basket" className="tab-icon" />
               <span>NFTs</span>
               {tab === "NFTs" && (
                 <>
-                  <img id="panel-left-edge" src={leftEdgeInner} />
-                  <img id="panel-right-edge" src={rightEdgeInner} />
-                  <img id="panel-top-edge" src={topEdgeInner} />
-                  <img id="panel-top-left" src={topLeftInner} />
-                  <img id="panel-top-right" src={topRightInner} />
+                  <img alt="img" id="panel-left-edge" alt="img" src={leftEdgeInner} />
+                  <img alt="img" id="panel-right-edge" alt="img" src={rightEdgeInner} />
+                  <img alt="img" id="panel-top-edge" alt="img" src={topEdgeInner} />
+                  <img alt="img" id="panel-top-left" alt="img" src={topLeftInner} />
+                  <img alt="img" id="panel-top-right" alt="img" src={topRightInner} />
                 </>
               )}
             </div>
@@ -92,15 +93,15 @@ export const Blacksmith: React.FC<Props> = ({
               }`}
               onClick={() => setTab("Community")}
             >
-              <img src={man} alt="basket" className="tab-icon" />
+              <img alt="img" src={man} alt="basket" className="tab-icon" />
               <span>Community</span>
               {tab === "Community" && (
                 <>
-                  <img id="panel-left-edge" src={leftEdgeInner} />
-                  <img id="panel-right-edge" src={rightEdgeInner} />
-                  <img id="panel-top-edge" src={topEdgeInner} />
-                  <img id="panel-top-left" src={topLeftInner} />
-                  <img id="panel-top-right" src={topRightInner} />
+                  <img alt="img" id="panel-left-edge" alt="img"  src={leftEdgeInner} />
+                  <img alt="img" id="panel-right-edge" alt="img"  src={rightEdgeInner} />
+                  <img alt="img" id="panel-top-edge" alt="img"  src={topEdgeInner} />
+                  <img alt="img" id="panel-top-left" alt="img" src={topLeftInner} />
+                  <img alt="img" id="panel-top-right" alt="img"  src={topRightInner} />
                 </>
               )}
             </div>
@@ -139,12 +140,12 @@ export const Blacksmith: React.FC<Props> = ({
         id="minter"
         onClick={() => setShowModal(true)}
       >
-        <img id="blacksmith" src={blacksmith} />
+        <img alt="img" id="blacksmith" alt="img" src={blacksmith} />
 
         <div className="mint">
           <div className="disc">
-            <img src={disc} className="discBackground" />
-            <img src={hammer} className="pickaxe" />
+            <img alt="img" src={disc} alt="img" className="discBackground" />
+            <img alt="img" src={hammer} alt="img" className="pickaxe" />
           </div>
           <Panel hasOuter={false}>
             <span id="upgrade">Craft</span>

@@ -10,7 +10,7 @@ import alert from "../../images/ui/expression_alerted.png";
 import coin from "../../images/ui/icon.png";
 import arrow from "../../images/ui/arrow_right.png";
 
-import { ActionableItem, Fruit, isFruit } from "../../types/contract";
+import { ActionableItem, isFruit } from "../../types/contract"; // Fruit
 
 import { secondsToString } from "../../utils/time";
 
@@ -18,7 +18,7 @@ import "./FruitBoard.css";
 
 import { Panel } from "../ui/Panel";
 import { Message } from "../ui/Message";
-import { FruitItem, getFruit } from "../../types/fruits";
+import { FruitItem } from "../../types/fruits"; // getFruit
 import { Items } from "../ui/Items";
 import { Inventory } from "../../types/crafting";
 
@@ -73,7 +73,7 @@ export const FruitBoard: React.FC<Props> = ({
           onClick={!isLocked ? () => selectFruit(fruit) : undefined}
         >
           <div className="image">
-            <img src={fruit.image} />
+            <img alt="img" src={fruit.image} />
           </div>
         </div>
         <div className="fruit-details">
@@ -81,24 +81,24 @@ export const FruitBoard: React.FC<Props> = ({
             <span className="title">{fruit.name}</span>
 
             <div className="fruit-time">
-              <img src={stopwatch} />
+              <img alt="img" src={stopwatch} />
               <span>{secondsToString(fruit.harvestMinutes * 60)}</span>
             </div>
           </div>
           <div className="fruit-breakdown">
             <div className="price">
               <span className="price-label">Plant</span>
-              <img src={coin} />
+              <img alt="img" src={coin} />
               <span>{buyPrice}</span>
             </div>
             <div className="fruit-arrows">
-              <img src={arrow} />
-              <img src={arrow} />
-              <img src={arrow} />
+              <img alt="img" src={arrow} />
+              <img alt="img" src={arrow} />
+              <img alt="img" src={arrow} />
             </div>
             <div className="price">
               <span className="price-label">Harvest</span>
-              <img src={coin} />
+              <img alt="img" src={coin} />
               <span>{sellPrice}</span>
             </div>
           </div>
@@ -111,7 +111,7 @@ export const FruitBoard: React.FC<Props> = ({
         <div className="upgrade-required">
           <Message>
             Upgrade Required
-            <img src={alert} className="insufficient-funds-alert" />
+            <img alt="img" src={alert} className="insufficient-funds-alert" />
           </Message>
         </div>
       );
@@ -120,7 +120,7 @@ export const FruitBoard: React.FC<Props> = ({
         <div className="upgrade-required">
           <Message>
             Insufficient funds
-            <img src={cancel} className="insufficient-funds-cross" />
+            <img alt="img" src={cancel} className="insufficient-funds-cross" />
           </Message>
         </div>
       );
@@ -130,8 +130,8 @@ export const FruitBoard: React.FC<Props> = ({
   return (
     <>
       <div id="basket" onClick={() => setShowModal(true)}>
-        <img className="basket-fruit" src={disc} />
-        <img className={`selected-fruit-${selectedItem.name.toLowerCase()}`} src={selectedItem.image} title={selectedItem.name} />
+        <img alt="img" className="basket-fruit" src={disc} />
+        <img alt="img" className={`selected-fruit-${selectedItem.name.toLowerCase()}`} src={selectedItem.image} title={selectedItem.name} />
         <Message>Change</Message>
       </div>
       <Modal

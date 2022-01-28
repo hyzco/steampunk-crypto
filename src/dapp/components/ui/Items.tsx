@@ -1,30 +1,24 @@
 import React from "react";
-
 import basket from "../../images/ui/basket.png";
-import plantIcon from "../../images/ui/plant.png";
-import hammer from "../../images/ui/hammer.png";
+// import hammer from "../../images/ui/hammer.png";
 import close from "../../images/ui/close.png";
-
 import leftEdgeInner from "../../images/ui/panel/lt_box_9slice_lc.png";
 import rightEdgeInner from "../../images/ui/panel/lt_box_9slice_rc.png";
 import topEdgeInner from "../../images/ui/panel/lt_box_9slice_tc.png";
 import topLeftInner from "../../images/ui/panel/lt_box_9slice_tl.png";
 import topRightInner from "../../images/ui/panel/lt_box_9slice_tr.png";
-
+import plantIcon from "../../images/ui/plant.png";
+import { ActionableItem, isFruit } from "../../types/contract"; // Fruit
+import { Inventory as InventorySupply } from "../../types/crafting"; // Item, items, Recipe recipes,
 import { FruitItem } from "../../types/fruits";
-import { ActionableItem, Fruit, isFruit } from "../../types/contract";
-
-import { Plants } from "./Plants";
 import { Inventory } from "./Inventory";
-
 import "./Inventory.css";
-import {
-  Inventory as InventorySupply,
-  Item,
-  items,
-  Recipe,
-  recipes,
-} from "../../types/crafting";
+import { Plants } from "./Plants";
+
+
+
+
+
 
 type Tab = "Plants" | "Items";
 
@@ -53,7 +47,7 @@ export const Items: React.FC<Props> = ({
 
   return (
     <div>
-      <img src={close} className="close-icon" onClick={onClose} />
+      <img alt="img" src={close} className="close-icon" onClick={onClose} />
       <div id="inventory-tabs">
         <div
           className={`inventory-tab ${tab === "Plants" && "active-tab"}`}
@@ -63,11 +57,11 @@ export const Items: React.FC<Props> = ({
           <span>Plants</span>
           {tab === "Plants" && (
             <>
-              <img id="panel-left-edge" src={leftEdgeInner} />
-              <img id="panel-right-edge" src={rightEdgeInner} />
-              <img id="panel-top-edge" src={topEdgeInner} />
-              <img id="panel-top-left" src={topLeftInner} />
-              <img id="panel-top-right" src={topRightInner} />
+              <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
+              <img alt="img" id="panel-right-edge" src={rightEdgeInner} />
+              <img alt="img" id="panel-top-edge" src={topEdgeInner} />
+              <img alt="img" id="panel-top-left" src={topLeftInner} />
+              <img alt="img" id="panel-top-right" src={topRightInner} />
             </>
           )}
         </div>
@@ -80,11 +74,11 @@ export const Items: React.FC<Props> = ({
           <span>Inventory</span>
           {tab === "Items" && (
             <>
-              <img id="panel-left-edge" src={leftEdgeInner} />
-              <img id="panel-right-edge" src={rightEdgeInner} />
-              <img id="panel-top-edge" src={topEdgeInner} />
-              <img id="panel-top-left" src={topLeftInner} />
-              <img id="panel-top-right" src={topRightInner} />
+              <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
+              <img alt="img" id="panel-right-edge" src={rightEdgeInner} />
+              <img alt="img" id="panel-top-edge" src={topEdgeInner} />
+              <img alt="img" id="panel-top-left" src={topLeftInner} />
+              <img alt="img" id="panel-top-right" src={topRightInner} />
             </>
           )}
         </div>

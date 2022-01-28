@@ -70,7 +70,7 @@ export const Reward: React.FC<Props> = ({ account }) => {
 
             {/* Present */}
             <div style={{ gridColumn: '12/13', gridRow: '9/10'}}>
-                <img id='present' src={present} onClick={onUpgrade} />
+                <img alt="img" id='present' src={present} onClick={onUpgrade} />
             </div>
         </>
     )

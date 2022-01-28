@@ -2,7 +2,7 @@ import React from "react";
 import Big from "big.js";
 
 import questionMark from "../../images/ui/expression_confused.png";
-import alert from "../../images/ui/expression_alerted.png";
+// import alert from "../../images/ui/expression_alerted.png";
 import logo from "../../images/ui/logo.png";
 import sunflower from "../../images/sunflower/fruit.gif";
 
@@ -55,7 +55,7 @@ export const Welcome: React.FC<Props> = ({ onGetStarted }) => {
   return (
     <Panel>
       <div id="welcome">
-        <img id="logo" src={logo} />
+        <img id="logo" alt="logo" src={logo} />
         <Button onClick={onGetStarted}>
           <span>Get Started</span>
         </Button>
@@ -63,13 +63,13 @@ export const Welcome: React.FC<Props> = ({ onGetStarted }) => {
           onClick={() => window.open("https://docs.sunflower-farmers.com/")}
         >
           About
-          <img src={questionMark} id="question" />
+          <img src={questionMark} alt={timeLeft} id="question" />
         </Button>
 
         <div>
           <br />
           <div className="current-price-container">
-            <img className="sunflower-price" src={sunflower} />
+            <img className="sunflower-price" alt="img" src={sunflower} />
             <span className="current-price">= {`${sunflowerPrice} $SFF`}</span>
           </div>
           <br />

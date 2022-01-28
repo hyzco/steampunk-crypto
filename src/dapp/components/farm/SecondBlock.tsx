@@ -53,7 +53,7 @@ export const SecondLand: React.FC<Props> = ({
   return (
     <>
       <div className="dirt" style={{ gridColumn: "2/3", gridRow: "8/9" }}>
-        {showWatering && <img id="watering2" src={watering} />}
+        {showWatering && <img alt="img" id="watering2" src={watering} />}
         {isUnlocked ? (
           <Field
             fruits={fruits}
@@ -68,7 +68,7 @@ export const SecondLand: React.FC<Props> = ({
           />
         ) : (
           <div className="field">
-            <img src={soil} />
+            <img alt="img" src={soil} />
           </div>
         )}
       </div>
@@ -87,7 +87,7 @@ export const SecondLand: React.FC<Props> = ({
           />
         ) : (
           <div className="field">
-            <img src={soil} />
+            <img alt="img" src={soil} />
           </div>
         )}
       </div>
@@ -106,7 +106,7 @@ export const SecondLand: React.FC<Props> = ({
           />
         ) : (
           <div className="field">
-            <img src={soil} />
+            <img alt="img" src={soil} />
           </div>
         )}
       </div>

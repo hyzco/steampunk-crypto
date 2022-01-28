@@ -14,21 +14,21 @@ interface Props {
 
 export const Bar: React.FC<Props> = ({ percentage }) => {
   if (percentage >= 1) {
-    return <img src={progressFull} className="tree-progress" />;
+    return <img alt="img" src={progressFull} className="tree-progress" />;
   }
   if (percentage >= 3 / 4) {
-    return <img src={progressAlmost} className="tree-progress" />;
+    return <img alt="img" src={progressAlmost} className="tree-progress" />;
   }
 
   if (percentage >= 1 / 2) {
-    return <img src={progressHalf} className="tree-progress" />;
+    return <img alt="img" src={progressHalf} className="tree-progress" />;
   }
 
   if (percentage >= 1 / 4) {
-    return <img src={progressQuarter} className="tree-progress" />;
+    return <img alt="img" src={progressQuarter} className="tree-progress" />;
   }
 
-  return <img src={progressStart} className="tree-progress" />;
+  return <img alt="img" src={progressStart} className="tree-progress" />;
 };
 
 export const Progress: React.FC<Props> = ({ percentage, seconds }) => {

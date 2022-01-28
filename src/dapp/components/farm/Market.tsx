@@ -19,19 +19,19 @@ export const Market: React.FC<Props> = () => {
         <>
             <MarketModal isOpen={showModal} onClose={() => setShowModal(false)} />
             {/* <div  style={{ gridColumn: '12/13', gridRow: '8/9'}}>
-                <img className='man' src={man} />
+                <img alt="img" className='man' src={man} />
             </div>
             <div  style={{ gridColumn: '13/14', gridRow: '8/9'}}>
-                <img className='girl' src={girl} />
+                <img alt="img" className='girl' src={girl} />
             </div>
 
             <div  style={{ gridColumn: '14/15', gridRow: '9/10'}}>
-                <img className='carrotMan' src={carrotMan} />
+                <img alt="img" className='carrotMan' src={carrotMan} />
             </div> */}
 
             <div onClick={() => setShowModal(true)} id='salesman' style={{ gridColumn: '13/14', gridRow: '10/11'}}>
-                <img className='baldMan' src={baldMan} />
-                <img className='chat' src={chat} />
+                <img alt="img" className='baldMan' src={baldMan} />
+                <img alt="img" className='chat' src={chat} />
             </div>
         </>
     )

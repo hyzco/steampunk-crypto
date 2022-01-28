@@ -34,11 +34,11 @@ export const RewardModal: React.FC<Props> = ({
   reward,
   onReceive,
 }) => {
-  const [machineState, send] = useService<
+  const [machineState] = useService<
     Context,
     BlockchainEvent,
     BlockchainState
-  >(service);
+  >(service); // send
 
   const isUnsaved = machineState.context.blockChain.isUnsaved();
 
@@ -57,7 +57,7 @@ export const RewardModal: React.FC<Props> = ({
               <div className="upgrade-required">
                 <Message>
                   Save your farm first
-                  <img src={cancel} className="insufficient-funds-cross" />
+                  <img alt="img" src={cancel} className="insufficient-funds-cross" />
                 </Message>
               </div>
               <span id="donate-description">
@@ -68,8 +68,8 @@ export const RewardModal: React.FC<Props> = ({
           ) : (
             <div>
               <div id="treasure-holder">
-                <img src={openTreasure} id="open-treasure" />
-                <img src={coin} id="reward-coin" />
+                <img alt="img" src={openTreasure} id="open-treasure" />
+                <img alt="img" src={coin} id="reward-coin" />
               </div>
               <div id="reward-holder">
                 <span>{`${reward.toFixed(2)} $SFF`}</span>

@@ -12,8 +12,8 @@ export const Pickaxe: React.FC<Props> = ({ className, onClick }) => {
     return (
         <div className={`dig ${className || ''}`} onClick={onClick}>
             <div className="disc">
-                <img src={disc} className="discBackground"/>
-                <img src={hammer}  className="pickaxe"/>
+                <img alt="img" src={disc} className="discBackground"/>
+                <img alt="img" src={hammer}  className="pickaxe"/>
 
             </div>
             <Panel hasOuter={false}>

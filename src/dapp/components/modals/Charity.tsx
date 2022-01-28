@@ -31,23 +31,23 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
     service
   );
 
-  const [balances, setBalances] = React.useState({
+  const [balances] = React.useState({
     coolEarthBalance: "",
     waterBalance: "",
     heiferBalance: "",
-  });
+  }); // setBalances
 
   const [donation, setDonation] = React.useState<number>(0.1);
 
   React.useEffect(() => {
-    if (machineState.context.blockChain.isConnected) {
-      const load = async () => {
-        const balances =
-          await machineState.context.blockChain.getCharityBalances();
-        // setBalances(balances);
-      };
-      load();
-    }
+    // if (machineState.context.blockChain.isConnected) {
+    //   const load = async () => {
+    //     const balances =
+    //       await machineState.context.blockChain.getCharityBalances();
+    //     setBalances(balances);
+    //   };
+    //   load();
+    // }
   }, [
     machineState.context.blockChain,
     machineState.context.blockChain.isConnected,
@@ -130,7 +130,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
                 }
               >
                 About
-                <img src={questionMark} id="question" />
+                <img alt="img" src={questionMark} id="question" />
               </Button>
               <Button
                 onClick={() =>

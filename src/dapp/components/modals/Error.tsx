@@ -96,7 +96,7 @@ const Content: React.FC<Props> = ({ code }) => {
         <a
           id="error-link"
           href="https://discord.gg/DZWHuhVUGN"
-          target="_blank"
+          // target="_blank"
         >
           faq
         </a>{" "}

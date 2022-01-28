@@ -8,7 +8,7 @@ import disc from "../../images/ui/disc.png";
 import hammer from "../../images/ui/hammer.png";
 import man from "../../images/characters/bald_man.png";
 import blacksmith from "../../images/machines/machine01.gif";
-import basket from "../../images/ui/basket.png";
+// import basket from "../../images/ui/basket.png";
 import gold from "../../images/ui/gold_egg.png";
 
 import leftEdgeInner from "../../images/ui/panel/lt_box_9slice_lc.png";
@@ -44,7 +44,7 @@ export const Machine: React.FC<Props> = ({
     <>
       <Modal centered show={showModal} onHide={() => setShowModal(false)}>
         <Panel hasTabs>
-          <img
+          <img alt="img"
             src={close}
             className="close-icon"
             onClick={() => setShowModal(false)}
@@ -60,11 +60,11 @@ export const Machine: React.FC<Props> = ({
               <span>Craft</span>
               {tab === "Craft" && (
                 <>
-                  <img id="panel-left-edge" src={leftEdgeInner} />
-                  <img id="panel-right-edge" src={rightEdgeInner} />
-                  <img id="panel-top-edge" src={topEdgeInner} />
-                  <img id="panel-top-left" src={topLeftInner} />
-                  <img id="panel-top-right" src={topRightInner} />
+                  <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
+                  <img alt="img" id="panel-right-edge" src={rightEdgeInner} />
+                  <img alt="img" id="panel-top-edge" src={topEdgeInner} />
+                  <img alt="img" id="panel-top-left" src={topLeftInner} />
+                  <img alt="img" id="panel-top-right" src={topRightInner} />
                 </>
               )}
             </div>
@@ -77,11 +77,11 @@ export const Machine: React.FC<Props> = ({
               <span>NFTs</span>
               {tab === "NFTs" && (
                 <>
-                  <img id="panel-left-edge" src={leftEdgeInner} />
-                  <img id="panel-right-edge" src={rightEdgeInner} />
-                  <img id="panel-top-edge" src={topEdgeInner} />
-                  <img id="panel-top-left" src={topLeftInner} />
-                  <img id="panel-top-right" src={topRightInner} />
+                  <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
+                  <img alt="img" id="panel-right-edge" src={rightEdgeInner} />
+                  <img alt="img" id="panel-top-edge" src={topEdgeInner} />
+                  <img alt="img" id="panel-top-left" src={topLeftInner} />
+                  <img alt="img" id="panel-top-right" src={topRightInner} />
                 </>
               )}
             </div>
@@ -96,11 +96,11 @@ export const Machine: React.FC<Props> = ({
               <span>Community</span>
               {tab === "Community" && (
                 <>
-                  <img id="panel-left-edge" src={leftEdgeInner} />
-                  <img id="panel-right-edge" src={rightEdgeInner} />
-                  <img id="panel-top-edge" src={topEdgeInner} />
-                  <img id="panel-top-left" src={topLeftInner} />
-                  <img id="panel-top-right" src={topRightInner} />
+                  <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
+                  <img alt="img" id="panel-right-edge" src={rightEdgeInner} />
+                  <img alt="img" id="panel-top-edge" src={topEdgeInner} />
+                  <img alt="img" id="panel-top-left" src={topLeftInner} />
+                  <img alt="img" id="panel-top-right" src={topRightInner} />
                 </>
               )}
             </div>
@@ -139,12 +139,12 @@ export const Machine: React.FC<Props> = ({
         id="minter"
         onClick={() => setShowModal(true)}
       >
-        <img id="machine_craft" src={blacksmith} />
+        <img alt="img" id="machine_craft" src={blacksmith} />
 
         <div className="mint">
           <div className="disc">
-            <img src={disc} className="discBackground" />
-            <img src={hammer} className="pickaxe" />
+            <img alt="img" src={disc} className="discBackground" />
+            <img alt="img" src={hammer} className="pickaxe" />
           </div>
           <Panel hasOuter={false}>
             <span id="upgrade">Craft</span>

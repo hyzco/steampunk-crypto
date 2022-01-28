@@ -84,7 +84,7 @@ export const UpgradeModal: React.FC<Props> = ({
               <div className="upgrade-required">
                 <Message>
                   Save your farm first
-                  <img src={cancel} className="insufficient-funds-cross" />
+                  <img alt="img" src={cancel} className="insufficient-funds-cross" />
                 </Message>
               </div>
               <span id="donate-description">
@@ -107,8 +107,8 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img src={pumpkin} className="upgrade-fruit" />
-                  <img src={beetroot} className="upgrade-fruit" />
+                  <img alt="img" src={pumpkin} className="upgrade-fruit" />
+                  <img alt="img" src={beetroot} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelOnePrice} $SFF`}</span>
@@ -133,7 +133,7 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img src={cauliflower} className="upgrade-fruit" />
+                  <img alt="img" src={cauliflower} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelTwoPrice} $SFF`}</span>
@@ -161,7 +161,7 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img src={parsnip} className="upgrade-fruit" />
+                  <img alt="img" src={parsnip} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelThreePrice} $SFF`}</span>
@@ -191,7 +191,7 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img src={radish} className="upgrade-fruit" />
+                  <img alt="img" src={radish} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelFourPrice} $SFF`}</span>
