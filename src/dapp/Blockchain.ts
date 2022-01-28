@@ -69,11 +69,11 @@ export class BlockChain {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0x2D9552f9BF74B47307749188b8170c526DfB3cAd"
+        "0x1764A0Ad76A5Bc3460c56219f7A910ea7A988036"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0x458360AD501c8008ce0805360109f5907FBc93EF"
+        "0xCf22bF1aFD1145694c79A128FA8ab96C20f5Fd11"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
@@ -105,11 +105,11 @@ export class BlockChain {
 
       this.alchemyToken = new this.web3.eth.Contract(
         Token as any,
-        "0xdf9B4b57865B403e08c85568442f95c26b7896b0"
+        "0x1764A0Ad76A5Bc3460c56219f7A910ea7A988036"
       );
       this.alchemyFarm = new this.web3.eth.Contract(
         Farm as any,
-        "0x6e5Fa679211d7F6b54e14E187D34bA547c5d3fe0"
+        "0xCf22bF1aFD1145694c79A128FA8ab96C20f5Fd11"
       );
     } catch (e) {
       // Timeout, retry
@@ -118,7 +118,7 @@ export class BlockChain {
         await new Promise((res) => window.setTimeout(res, 3000));
       } else {
         console.error(e);
-        throw e;
+        // throw e;
       }
     }
   }
@@ -150,7 +150,7 @@ export class BlockChain {
         // this.web3 = web3;
 
         // console.log(this.web3);
-        // this.web3 = new Web3((window as any).web3.currentProvider);
+        this.web3 = new Web3((window as any).web3.currentProvider);
       } catch (error) {
         // User denied account access...
         console.error(error);
@@ -189,44 +189,45 @@ export class BlockChain {
         e.message !== "WRONG_CHAIN" &&
         e.message !== "NO_WEB3"
       ) {
+        console.log(e);
         console.log("Try again");
         await new Promise((res) => setTimeout(res, 2000));
 
         return this.initialise(retryCount + 1);
       }
       console.error(e);
-      throw e;
+      // throw e;
     }
   }
 
   public async loadFarm() {
     const [
       account,
-      inventory,
-      itemSupplies,
-      tree,
-      stone,
-      iron,
-      gold,
-      hatchTime,
+      // inventory,
+      // itemSupplies,
+      // tree,
+      // stone,
+      // iron,
+      // gold,
+      // hatchTime,
     ] = await Promise.all([
       this.getAccount(),
-      this.loadInventory(),
-      this.loadTotalItemSupplies(),
-      this.loadTreeStrength(),
-      this.loadStoneStrength(),
-      this.loadIronStrength(),
-      this.loadGoldStrength(),
-      this.loadEggCollectionTime(),
+      // this.loadInventory(),
+      // this.loadTotalItemSupplies(),
+      // this.loadTreeStrength(),
+      // this.loadStoneStrength(),
+      // this.loadIronStrength(),
+      // this.loadGoldStrength(),
+      // this.loadEggCollectionTime(),
     ]);
     this.details = account;
-    this.inventory = inventory;
-    this.totalItemSupplies = itemSupplies;
-    this.woodStrength = tree;
-    this.stoneStrength = stone;
-    this.ironStrength = iron;
-    this.goldStrength = gold;
-    this.eggCollectionTime = hatchTime;
+    // this.inventory = inventory;
+    // this.totalItemSupplies = itemSupplies;
+    // this.woodStrength = tree;
+    // this.stoneStrength = stone;
+    // this.ironStrength = iron;
+    // this.goldStrength = gold;
+    // this.eggCollectionTime = hatchTime;
 
     await this.cacheTotalSupply();
   }
@@ -248,9 +249,10 @@ export class BlockChain {
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
+      console.log(gasPrice);
 
       this.farm.methods
-        .createFarm(donation.charity)
+        .createFarm()
         .send({
           from: this.account,
           value,
@@ -509,7 +511,7 @@ export class BlockChain {
     console.log({ recipe, amount });
 
     const value = Web3Utils.toWei(eth.toString(), "ether");
-    const gasPrice = await this.estimate(2);
+    const gasPrice = await this.estimate();
 
     await new Promise(async (resolve, reject) => {
       this.communityCrafting.methods
@@ -699,8 +701,8 @@ export class BlockChain {
     try {
       const reward = await this.farm.methods
         .myReward()
-        .call({ from: this.account });
-
+        .call({ from: this.account }).then();
+     
       if (!reward) {
         return 0;
       }
@@ -710,7 +712,8 @@ export class BlockChain {
       return Number(converted);
     } catch (e) {
       // No reward ready
-      return null;
+      console.log(e);
+      // return null;
     }
   }
 
@@ -718,7 +721,7 @@ export class BlockChain {
     const reward = await this.getReward();
 
     await new Promise(async (resolve, reject) => {
-      const gasPrice = await this.estimate(2);
+      const gasPrice = await this.estimate();
 
       this.farm.methods
         .receiveReward()
@@ -749,7 +752,7 @@ export class BlockChain {
 
   public async collectEggs() {
     await new Promise(async (resolve, reject) => {
-      const gasPrice = await this.estimate(2);
+      const gasPrice = await this.estimate();
 
       this.chickens.methods
         .collectEggs()
@@ -808,7 +811,7 @@ export class BlockChain {
     }
 
     return new Promise(async (resolve, reject) => {
-      const gasPrice = await this.estimate(2);
+      const gasPrice = await this.estimate();
 
       try {
         this.token.methods

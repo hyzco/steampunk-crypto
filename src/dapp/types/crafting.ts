@@ -504,51 +504,51 @@ export const recipes: Recipe[] = [
 ];
 
 export const items: Item[] = [
-  ...recipes,
-  {
-    name: "Stone",
-    abi: Stone,
-    description: "A natural resource in Sunflower Land used for crafting",
-    image: stone,
-    type: "ERC20",
-    address: "0xE11e8ff4D9C10A7E4524e8fE6b4F1F3E8665eDCE",
-  },
-  {
-    name: "Wood",
-    abi: Wood,
-    description:
-      "A bountiful resource in Sunflower Land used for crafting",
-    image: wood,
-    type: "ERC20",
-    address: "0xC8A6fFc3720867470A2395D1634B3085BbDDf71a",
-  },
+  // ...recipes,
+  // {
+  //   name: "Stone",
+  //   abi: Stone,
+  //   description: "A natural resource in Sunflower Land used for crafting",
+  //   image: stone,
+  //   type: "ERC20",
+  //   address: "0xE11e8ff4D9C10A7E4524e8fE6b4F1F3E8665eDCE",
+  // },
+  // {
+  //   name: "Wood",
+  //   abi: Wood,
+  //   description:
+  //     "A bountiful resource in Sunflower Land used for crafting",
+  //   image: wood,
+  //   type: "ERC20",
+  //   address: "0xC8A6fFc3720867470A2395D1634B3085BbDDf71a",
+  // },
 
-  {
-    name: "Iron",
-    abi: Iron,
-    description:
-      "A bountiful resource in Sunflower Land used for crafting",
-    image: iron,
-    type: "ERC20",
-    address: "0x4a114F6EC3e0f6c57A9Db37140ca88Ee5525E55B",
-  },
-  {
-    name: "Gold",
-    abi: Gold,
-    description: "A scarce resource in Sunflower Land used for crafting",
-    image: goldOre,
-    type: "ERC20",
-    address: "0xbc7B1c141218C5d7BD1BEb8098BDe5D8a1e327E6",
-  },
-  {
-    name: "Egg",
-    abi: Egg,
-    description:
-      "A bountiful resource in Sunflower Land used for crafting",
-    image: egg,
-    type: "ERC20",
-    address: "0x3560B931b122fF740Db06CB5B4569A0dC5d28954",
-  },
+  // {
+  //   name: "Iron",
+  //   abi: Iron,
+  //   description:
+  //     "A bountiful resource in Sunflower Land used for crafting",
+  //   image: iron,
+  //   type: "ERC20",
+  //   address: "0x4a114F6EC3e0f6c57A9Db37140ca88Ee5525E55B",
+  // },
+  // {
+  //   name: "Gold",
+  //   abi: Gold,
+  //   description: "A scarce resource in Sunflower Land used for crafting",
+  //   image: goldOre,
+  //   type: "ERC20",
+  //   address: "0xbc7B1c141218C5d7BD1BEb8098BDe5D8a1e327E6",
+  // },
+  // {
+  //   name: "Egg",
+  //   abi: Egg,
+  //   description:
+  //     "A bountiful resource in Sunflower Land used for crafting",
+  //   image: egg,
+  //   type: "ERC20",
+  //   address: "0x3560B931b122fF740Db06CB5B4569A0dC5d28954",
+  // },
 ];
 
 export type Inventory = Record<ItemName, number>;
