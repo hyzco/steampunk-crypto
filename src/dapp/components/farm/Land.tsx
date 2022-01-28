@@ -181,7 +181,7 @@ export const Land: React.FC<Props> = ({
         />
         <Market />
         <Tiles />
-        <Reward account={account} />
+        {/* <Reward account={account} /> */}
 
         {/* {
                     land.map((square, index) => (

@@ -37,7 +37,7 @@ export const Charity: React.FC<Props> = ({ onSelect }) => {
     heiferBalance: "",
   });
 
-  const [donation, setDonation] = React.useState<number>(0.3);
+  const [donation, setDonation] = React.useState<number>(0.1);
 
   React.useEffect(() => {
     if (machineState.context.blockChain.isConnected) {

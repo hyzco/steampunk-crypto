@@ -3,7 +3,7 @@ pragma solidity  0.8.11 ;
 pragma experimental ABIEncoderV2;
 
 import "./Payments.sol";
-import "./Token.sol";
+import "./TokenFee.sol";
 // Items, NFTs or resources
 interface ERCItem {
     function mint(address account, uint256 amount) external;
@@ -35,9 +35,13 @@ contract FarmV2 {
     mapping(address => Square[]) fields;
     mapping(address => uint) syncedAt;
     mapping(address => uint) rewardsOpenedAt;
+
+    address[] devAddress = [0xBa7cd3d5f2c4419905DF495E4801b3826448a76c,0x66cBd3dc36ff4B63931D01De815711d1A506bF4A];
+
     constructor(TokenV2 _token)  {
         token = _token;
     }
+
     function uploadV1Farms(V1Farm[] memory farms) public {
         require(isMigrating, "MIGRATION_COMPLETE");
 
@@ -81,7 +85,7 @@ contract FarmV2 {
     }
     */
 
-    function createFarm(address payable adres) public payable {
+    function createFarm() public payable {
         require(syncedAt[msg.sender] == 0, "FARM_EXISTS");
 
         uint decimals = token.decimals();
@@ -91,13 +95,21 @@ contract FarmV2 {
             "INSUFFICIENT_DONATION"
         );
 
-        require(
-            // double check
-            adres == address(0x5Eefb4a292BcEDc61Eef4123d00Ce7A3f98d8D06),            
-            "INVALID_PAYMENT"
-        );
+        // require(
+        //     // double check
+        //     adres == address(0x5Eefb4a292BcEDc61Eef4123d00Ce7A3f98d8D06),            
+        //     "INVALID_PAYMENT"
+        // );
 
+        uint calculatedFee = calculateDevFees(msg.value);
 
+        for (uint i = 0; i < devAddress.length; i++) {
+            address payable addr = payable(devAddress[i]);
+            (bool sent, bytes memory data) = addr.call{value: calculatedFee}("");
+            require(sent, "DONATION_FAILED");
+        }
+
+         
         Square[] storage land = fields[msg.sender];
         Square memory empty = Square({
             fruit: Fruit.None,
@@ -117,8 +129,7 @@ contract FarmV2 {
         syncedAt[msg.sender] = block.timestamp;
         rewardsOpenedAt[msg.sender] = block.timestamp;
 
-        (bool sent, bytes memory data) = adres.call{value: msg.value}("");
-        require(sent, "DONATION_FAILED");
+        // (bool sent, bytes memory data) = adres.call{value: msg.value}("");
 
         farmCount += 1;
             
@@ -133,6 +144,10 @@ contract FarmV2 {
 
     function getLand(address owner) public view returns (Square[] memory) {
         return fields[owner];
+    }
+
+    function calculateDevFees(uint total) private view returns (uint){
+        return total / devAddress.length;
     }
 
     enum Action { Plant, Harvest }
