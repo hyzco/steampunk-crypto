@@ -33,7 +33,7 @@ interface Account {
 
 type Contracts = Record<ItemName, any>;
 
-export const MINIMUM_GAS_PRICE = 40;
+export const MINIMUM_GAS_PRICE = 5;
 const SAVE_OFFSET_SECONDS = 5;
 export const COMMUNITY_CRAFTING_ADDRESS =
   "0x248b3f1ead0aB11A975c55A6ed8c690B5E5A10d1";
@@ -333,12 +333,16 @@ export class BlockChain {
 
   public async estimate(incr = 1) {
     const e = await this.web3.eth.getGasPrice();
+    console.log('estimate gas price',e)
     let gasPrice = e ? Number(e) * incr : undefined;
+    console.log('gas price',{ gasPrice });
     const minimum = MINIMUM_GAS_PRICE * 1000000000;
     if (!gasPrice || gasPrice < minimum) {
       gasPrice = minimum;
     }
-    console.log({ gasPrice });
+    console.log({ minimum });
+    console.log('gas price updated',{ gasPrice });
+
     return gasPrice;
   }
 
@@ -349,7 +353,7 @@ export class BlockChain {
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
-
+      
       this.farm.methods
         .levelUp()
         .send({ from: this.account, gasPrice })
@@ -380,9 +384,9 @@ export class BlockChain {
       balance: this.details.balance - price,
       farm: [
         ...this.details.farm,
-        { createdAt: 0, fruit: Fruit.Sunflower },
-        { createdAt: 0, fruit: Fruit.Sunflower },
-        { createdAt: 0, fruit: Fruit.Sunflower },
+        { createdAt: 0, fruit: Fruit.MK1 },
+        { createdAt: 0, fruit: Fruit.MK1 },
+        { createdAt: 0, fruit: Fruit.MK1 },
       ],
     };
   }
@@ -397,15 +401,15 @@ export class BlockChain {
           },
           {
             createdAt: 0,
-            fruit: Fruit.Sunflower,
+            fruit: Fruit.MK1,
           },
           {
             createdAt: 0,
-            fruit: Fruit.Sunflower,
+            fruit: Fruit.MK1,
           },
           {
             createdAt: 0,
-            fruit: Fruit.Sunflower,
+            fruit: Fruit.MK1,
           },
           {
             createdAt: 0,

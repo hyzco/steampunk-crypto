@@ -113,13 +113,13 @@ export const Barn: React.FC<Props> = ({ farmSize, balance }) => {
       {/* Barn */}
       <div style={{ gridColumn: "12/13", gridRow: "7/8" }}>
         <div id="house">
-          <img alt="img" id="side-house" src={baseLvl3} />
-          <img alt="img" id="smoke" src={smoke} />
-
+          <img alt="img" id="side-house" src={base} />
+          
           {farmSize > 5 && <img alt="img" id="level" src={baseLvl2} />}
           {farmSize > 8 && (
             <>
-              <img alt="img" id="base" src={base} />
+              <img alt="img" id="base" src={baseLvl3} />
+              <img alt="img" id="smoke" src={smoke} />
             </>
           )}
 

@@ -11,10 +11,12 @@ interface Props {
     startAtSeconds: number
 }
 
-const THIRTY_MINUTES = 60 * 25
+// const THIRTY_MINUTES = 60 * 25;
+
+const SIXTY_MINUTES = 60 * 60;
 
 export const Timer: React.FC<Props> = ({ startAtSeconds }) => {
-    const [secondsLeft, setSecondsLeft] = React.useState(THIRTY_MINUTES)
+    const [secondsLeft, setSecondsLeft] = React.useState(SIXTY_MINUTES)
 
     React.useEffect(() => {
         let interval: number;
@@ -23,7 +25,7 @@ export const Timer: React.FC<Props> = ({ startAtSeconds }) => {
             interval = window.setInterval(() => {
                 const now = Math.floor(Date.now() / 1000)
                 const difference = now - startAtSeconds
-                const time = THIRTY_MINUTES - difference
+                const time = SIXTY_MINUTES - difference
     
                 setSecondsLeft(time)
             }, 1000)

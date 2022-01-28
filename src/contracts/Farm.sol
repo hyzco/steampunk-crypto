@@ -116,7 +116,7 @@ contract FarmV2 {
             createdAt: 0
         });
         Square memory sunflower = Square({
-            fruit: Fruit.Sunflower,
+            fruit: Fruit.MK1,
             createdAt: 0
         });
 
@@ -151,7 +151,7 @@ contract FarmV2 {
     }
 
     enum Action { Plant, Harvest }
-    enum Fruit { None, Sunflower, Potato, Pumpkin, Beetroot, Cauliflower, Parsnip, Radish }
+    enum Fruit { None, MK1, MK2, MK3, MK4, Cauliflower, Parsnip, Radish }
 
     struct Event { 
         Action action;
@@ -166,28 +166,30 @@ contract FarmV2 {
     }
 
     function getHarvestSeconds(Fruit _fruit) private pure returns (uint) {
-        if (_fruit == Fruit.Sunflower) {
-            // 1 minute
-            return 1 * 60;
-        } else if (_fruit == Fruit.Potato) {
-            // 5 minutes
+        if (_fruit == Fruit.MK1) {
+            // 5 minute
             return 5 * 60;
-        } else if (_fruit == Fruit.Pumpkin) {
-            // 1 hour
-            return 1  * 60 * 60;
-        } else if (_fruit == Fruit.Beetroot) {
-            // 4 hours
-            return 4 * 60 * 60;
-        } else if (_fruit == Fruit.Cauliflower) {
+        } else if (_fruit == Fruit.MK2) {
+            // 120 minutes
+            return 2  * 60 * 60;
+        } else if (_fruit == Fruit.MK3) {
+            // 4 hour
+            return 4  * 60 * 60;
+        } else if (_fruit == Fruit.MK4) {
             // 8 hours
             return 8 * 60 * 60;
-        } else if (_fruit == Fruit.Parsnip) {
-            // 1 day
-            return 24 * 60 * 60;
-        } else if (_fruit == Fruit.Radish) {
-            // 3 days
-            return 3 * 24 * 60 * 60;
-        }
+        } 
+        
+        // else if (_fruit == Fruit.Cauliflower) {
+        //     // 8 hours
+        //     return 8 * 60 * 60;
+        // } else if (_fruit == Fruit.Parsnip) {
+        //     // 1 day
+        //     return 24 * 60 * 60;
+        // } else if (_fruit == Fruit.Radish) {
+        //     // 3 days
+        //     return 3 * 24 * 60 * 60;
+        // }
 
         require(false, "INVALID_FRUIT");
         return 9999999;
@@ -196,28 +198,30 @@ contract FarmV2 {
     function getSeedPrice(Fruit _fruit) private view returns (uint price) {
         uint decimals = token.decimals();
 
-        if (_fruit == Fruit.Sunflower) {
+        if (_fruit == Fruit.MK1) {
             //$0.01
             return 1 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Potato) {
+        } else if (_fruit == Fruit.MK2) {
             // $0.10
             return 10 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Pumpkin) {
-            // $0.40
-            return 40 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Beetroot) {
-            // $1
-            return 1 * 10**decimals;
-        } else if (_fruit == Fruit.Cauliflower) {
-            // $4
-            return 4 * 10**decimals;
-        } else if (_fruit == Fruit.Parsnip) {
-            // $10
-            return 10 * 10**decimals;
-        } else if (_fruit == Fruit.Radish) {
-            // $50
-            return 50 * 10**decimals;
-        }
+        } else if (_fruit == Fruit.MK3) {
+            // $0.2
+            return 20 * 10**decimals / 100;
+        } else if (_fruit == Fruit.MK4) {
+            // $0.4
+            return 40 * 10**decimals;
+        } 
+        
+        // else if (_fruit == Fruit.Cauliflower) {
+        //     // $4
+        //     return 4 * 10**decimals;
+        // } else if (_fruit == Fruit.Parsnip) {
+        //     // $10
+        //     return 10 * 10**decimals;
+        // } else if (_fruit == Fruit.Radish) {
+        //     // $50
+        //     return 50 * 10**decimals;
+        // }
 
         require(false, "INVALID_FRUIT");
 
@@ -227,28 +231,30 @@ contract FarmV2 {
     function getFruitPrice(Fruit _fruit) private view returns (uint price) {
         uint decimals = token.decimals();
 
-        if (_fruit == Fruit.Sunflower) {
-            // $0.02
-            return 2 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Potato) {
+        if (_fruit == Fruit.MK1) {
+            // $0.02 //temporarily
+            return 500 * 10**decimals / 100;
+        } else if (_fruit == Fruit.MK2) {
             // $0.16
             return 16 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Pumpkin) {
-            // $0.80
+        } else if (_fruit == Fruit.MK3) {
+            // $0.36
+            return 36 * 10**decimals / 100;
+        } else if (_fruit == Fruit.MK4) {
+            // $0.8
             return 80 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Beetroot) {
-            // $1.8
-            return 180 * 10**decimals / 100;
-        } else if (_fruit == Fruit.Cauliflower) {
-            // $8
-            return 8 * 10**decimals;
-        } else if (_fruit == Fruit.Parsnip) {
-            // $16
-            return 16 * 10**decimals;
-        } else if (_fruit == Fruit.Radish) {
-            // $80
-            return 80 * 10**decimals;
-        }
+        } 
+        
+        // else if (_fruit == Fruit.Cauliflower) {
+        //     // $8
+        //     return 8 * 10**decimals;
+        // } else if (_fruit == Fruit.Parsnip) {
+        //     // $16
+        //     return 16 * 10**decimals;
+        // } else if (_fruit == Fruit.Radish) {
+        //     // $80
+        //     return 80 * 10**decimals;
+        // }
 
         require(false, "INVALID_FRUIT");
 
@@ -256,17 +262,19 @@ contract FarmV2 {
     }
     
     function requiredLandSize(Fruit _fruit) private pure returns (uint size) {
-        if (_fruit == Fruit.Sunflower || _fruit == Fruit.Potato) {
+        if (_fruit == Fruit.MK1) {
             return 5;
-        } else if (_fruit == Fruit.Pumpkin || _fruit == Fruit.Beetroot) {
+        } else if (_fruit == Fruit.MK2 ) {
             return 8;
-        } else if (_fruit == Fruit.Cauliflower) {
+        } else if (_fruit == Fruit.MK3) {
             return 11;
-        } else if (_fruit == Fruit.Parsnip) {
+        } else if (_fruit == Fruit.MK4) {
             return 14;
-        } else if (_fruit == Fruit.Radish) {
-            return 17;
-        }
+        } 
+        
+        // else if (_fruit == Fruit.Radish) {
+        //     return 17;
+        // }
 
         require(false, "INVALID_FRUIT");
 
@@ -278,13 +286,13 @@ contract FarmV2 {
         uint decimals = token.decimals();
         if (landSize <= 5) {
             // $1
-            return 1 * 10**decimals;
+            return 5 * 10**decimals;
         } else if (landSize <= 8) {
-            // 50
-            return 50 * 10**decimals;
+            // 15
+            return 15 * 10**decimals;
         } else if (landSize <= 11) {
-            // $500
-            return 500 * 10**decimals;
+            // $30
+            return 30 * 10**decimals;
         }
         
         // $2500
@@ -400,7 +408,7 @@ contract FarmV2 {
         
         // Add 3 sunflower fields in the new fields
         Square memory sunflower = Square({
-            fruit: Fruit.Sunflower,
+            fruit: Fruit.MK1,
             // Make them immediately harvestable in case they spent all their tokens
             createdAt: 0
         });
