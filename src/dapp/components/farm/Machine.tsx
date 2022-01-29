@@ -6,10 +6,10 @@ import { Panel } from "../ui/Panel";
 import close from "../../images/ui/close.png";
 import disc from "../../images/ui/disc.png";
 import hammer from "../../images/ui/hammer.png";
-import man from "../../images/characters/bald_man.png";
+// import man from "../../images/characters/bald_man.png";
 import blacksmith from "../../images/machines/machine01.gif";
 // import basket from "../../images/ui/basket.png";
-import gold from "../../images/ui/gold_egg.png";
+// import gold from "../../images/ui/gold_egg.png";
 
 import leftEdgeInner from "../../images/ui/panel/lt_box_9slice_lc.png";
 import rightEdgeInner from "../../images/ui/panel/lt_box_9slice_rc.png";
@@ -18,8 +18,8 @@ import topLeftInner from "../../images/ui/panel/lt_box_9slice_tl.png";
 import topRightInner from "../../images/ui/panel/lt_box_9slice_tr.png";
 
 import { Tools } from "../ui/Tools";
-import { NFTs } from "../ui/NFTs";
-import { CommunityCrafting } from "../ui/CommunityCrafting";
+// import { NFTs } from "../ui/NFTs";
+// import { CommunityCrafting } from "../ui/CommunityCrafting";
 import { Inventory } from "../../types/crafting";
 
 interface Props {
@@ -36,7 +36,7 @@ export const Machine: React.FC<Props> = ({
 }) => {
   const [showModal, setShowModal] = React.useState(false);
 
-  const [tab, setTab] = React.useState<"Craft" | "NFTs" | "Community">(
+  const [tab, setTab] = React.useState<"Craft">(
     "Craft"
   );
 
@@ -57,7 +57,7 @@ export const Machine: React.FC<Props> = ({
               onClick={() => setTab("Craft")}
             >
               <img src={hammer} alt="basket" className="tab-icon" />
-              <span>Craft</span>
+              <span>Lottery</span>
               {tab === "Craft" && (
                 <>
                   <img alt="img" id="panel-left-edge" src={leftEdgeInner} />
@@ -69,7 +69,7 @@ export const Machine: React.FC<Props> = ({
               )}
             </div>
 
-            <div
+            {/* <div
               className={`inventory-tab ${tab === "NFTs" && "active-tab"}`}
               onClick={() => setTab("NFTs")}
             >
@@ -103,7 +103,7 @@ export const Machine: React.FC<Props> = ({
                   <img alt="img" id="panel-top-right" src={topRightInner} />
                 </>
               )}
-            </div>
+            </div> */}
           </div>
           {tab === "Craft" && (
             <Tools
@@ -114,7 +114,7 @@ export const Machine: React.FC<Props> = ({
               level={level}
             />
           )}
-          {tab === "NFTs" && (
+          {/* {tab === "NFTs" && (
             <NFTs
               onClose={() => setShowModal(false)}
               inventory={inventory}
@@ -131,7 +131,7 @@ export const Machine: React.FC<Props> = ({
               balance={balance}
               level={level}
             />
-          )}
+          )} */}
         </Panel>
       </Modal>
       <div

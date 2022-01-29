@@ -111,7 +111,7 @@ export const UpgradeModal: React.FC<Props> = ({
                   {/* <img alt="img" src={beetroot} className="upgrade-fruit" /> */}
                 </div>
                 <div className="charity-buttons">
-                  <span>{`${levelOnePrice} $SFF`}</span>
+                  <span>{`${levelOnePrice} $SPM`}</span>
                   <Button
                     disabled={isUnsaved || balance < levelOnePrice}
                     onClick={onUpgrade}
@@ -136,7 +136,7 @@ export const UpgradeModal: React.FC<Props> = ({
                   <img alt="img" src={MK3} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
-                  <span>{`${levelTwoPrice} $SFF`}</span>
+                  <span>{`${levelTwoPrice} $SPM`}</span>
                   <Button
                     disabled={
                       isUnsaved || farmSize < 8 || balance < levelTwoPrice
@@ -164,7 +164,7 @@ export const UpgradeModal: React.FC<Props> = ({
                   <img alt="img" src={MK4} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
-                  <span>{`${levelThreePrice} $SFF`}</span>
+                  <span>{`${levelThreePrice} $SPM`}</span>
                   <Button
                     disabled={
                       isUnsaved ||
@@ -194,7 +194,7 @@ export const UpgradeModal: React.FC<Props> = ({
                   <img alt="img" src={radish} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
-                  <span>{`${levelFourPrice} $SFF`}</span>
+                  <span>{`${levelFourPrice} $SPM`}</span>
                   <Button
                     disabled={
                       isUnsaved ||

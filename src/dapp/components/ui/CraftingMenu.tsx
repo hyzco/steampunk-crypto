@@ -81,7 +81,7 @@ export const CraftingMenu: React.FC<Props> = ({
 
   const ingredientList = selectedRecipe.ingredients.map((ingredient) => {
     const inventoryCount =
-      ingredient.name === "$SFF" ? balance : inventory[ingredient.name];
+      ingredient.name === "$SPM" ? balance : inventory[ingredient.name];
     const price = ingredient.amount * amount;
     return {
       name: ingredient.name,
@@ -182,7 +182,7 @@ export const CraftingMenu: React.FC<Props> = ({
         </div>
         <a
           href="https://docs.sunflower-farmers.com/crafting-guide"
-          target="_blank"
+          // target="_blank"
         >
           <h3 className="current-price-supply-demand">Read more</h3>
         </a>
@@ -241,7 +241,7 @@ export const CraftingMenu: React.FC<Props> = ({
         {selectedRecipe.openSeaLink && (
           <span id="recipe-description">
             <a
-              target="_blank"
+              // target="_blank"
               href={selectedRecipe.openSeaLink}
               style={{ color: "white", textDecoration: "underline" }}
             >
