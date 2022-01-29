@@ -70,7 +70,6 @@ export const CommunityApproval: React.FC<Props> = ({
       );
       setIsApproved(true);
     } catch (e) {
-      console.log(e);
       setError(`Unable to approve`);
     } finally {
       setIsApproving(false);

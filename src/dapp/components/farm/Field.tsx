@@ -121,19 +121,19 @@ export const Field: React.FC<Props> = ({
 
   const Seedling = () => {
     // TODO different plant seedlings
-    if (square.fruit === Fruit.MK1) {
+    if (square.fruit === Fruit.Sunflower) {
       return <img alt="img" src={sunflowerSeedling} className="seedling" />;
     }
 
-    if (square.fruit === Fruit.MK2) {
+    if (square.fruit === Fruit.Potato) {
       return <img alt="img" src={potatoSeedling} className="seedling potato-seedling" />;
     }
 
-    if (square.fruit === Fruit.MK3) {
+    if (square.fruit === Fruit.Pumpkin) {
       return <img alt="img" src={pumpkinSeedling} className="seedling pumpkin-seedling" />;
     }
 
-    if (square.fruit === Fruit.MK4) {
+    if (square.fruit === Fruit.Beetroot) {
       return <img alt="img" src={beetrootSeedling} className="seedling beetroot-seedling" />;
     }
 
@@ -161,19 +161,19 @@ export const Field: React.FC<Props> = ({
 
   const Plant = () => {
     // TODO different plant seedlings
-    if (square.fruit === Fruit.MK1) {
+    if (square.fruit === Fruit.Sunflower) {
       return <img alt="img" src={sunflower} className="sunflower" />;
     }
 
-    if (square.fruit === Fruit.MK2) {
+    if (square.fruit === Fruit.Potato) {
       return <img alt="img" src={potato} className="potato" />;
     }
 
-    if (square.fruit === Fruit.MK3) {
+    if (square.fruit === Fruit.Pumpkin) {
       return <img alt="img" src={pumpkin} className="pumpkin" />;
     }
 
-    if (square.fruit === Fruit.MK4) {
+    if (square.fruit === Fruit.Beetroot) {
       return <img alt="img" src={beetroot} className="beetroot" />;
     }
 

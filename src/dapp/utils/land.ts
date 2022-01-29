@@ -28,15 +28,15 @@ export function getUpgradePrice({
   const marketRate = getMarketRate(totalSupply);
 
   if (farmSize <= 5) {
-    return 5 / marketRate;
+    return 1 / marketRate;
   }
 
   if (farmSize <= 8) {
-    return 15 / marketRate;
+    return 50 / marketRate;
   }
 
   if (farmSize <= 11) {
-    return 30 / marketRate;
+    return 500 / marketRate;
   }
 
   return 2500 / marketRate;

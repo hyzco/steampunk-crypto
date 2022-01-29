@@ -10,13 +10,13 @@ import {
   BlockchainState,
 } from "../../machine";
 
-import MK1 from "../../images/sunflower/fruit.gif";
-import MK2 from "../../images/potato/fruit.gif";
-import MK3 from "../../images/beetroot/fruit.gif";
-import MK4 from "../../images/pumpkin/fruit.gif";
-// import cauliflower from "../../images/cauliflower/fruit.png";
-// import parsnip from "../../images/parsnip/fruit.png";
-// import radish from "../../images/radish/fruit.png";
+import sunflower from "../../images/sunflower/fruit.gif";
+import potato from "../../images/potato/fruit.gif";
+import pumpkin from "../../images/pumpkin/fruit.gif";
+import beetroot from "../../images/beetroot/fruit.gif";
+import cauliflower from "../../images/cauliflower/fruit.png";
+import parsnip from "../../images/parsnip/fruit.png";
+import radish from "../../images/radish/fruit.png";
 
 import cancel from "../../images/ui/cancel.png";
 
@@ -107,8 +107,8 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img alt="img" src={MK2} className="upgrade-fruit" />
-                  {/* <img alt="img" src={beetroot} className="upgrade-fruit" /> */}
+                  <img alt="img" src={pumpkin} className="upgrade-fruit" />
+                  <img alt="img" src={beetroot} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelOnePrice} $SPM`}</span>
@@ -133,7 +133,7 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img alt="img" src={MK3} className="upgrade-fruit" />
+                  <img alt="img" src={cauliflower} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelTwoPrice} $SPM`}</span>
@@ -161,7 +161,7 @@ export const UpgradeModal: React.FC<Props> = ({
                 </span>
                 <div className="upgrade-icons">
                   <span className="charity-description">Unlock:</span>
-                  <img alt="img" src={MK4} className="upgrade-fruit" />
+                  <img alt="img" src={parsnip} className="upgrade-fruit" />
                 </div>
                 <div className="charity-buttons">
                   <span>{`${levelThreePrice} $SPM`}</span>
@@ -184,7 +184,7 @@ export const UpgradeModal: React.FC<Props> = ({
               </div>
             )}
 
-            {/* {farmSize === 14 && (
+            {farmSize === 14 && (
               <div>
                 <span className="charity-description">
                   Upgrade to 17 fields
@@ -212,7 +212,7 @@ export const UpgradeModal: React.FC<Props> = ({
                   </span>
                 )}
               </div>
-            )} */}
+            )}
           </div>
         </div>
       </Panel>
