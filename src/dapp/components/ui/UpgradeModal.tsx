@@ -12,8 +12,8 @@ import {
 
 import MK1 from "../../images/sunflower/fruit.gif";
 import MK2 from "../../images/potato/fruit.gif";
-import MK3 from "../../images/pumpkin/fruit.gif";
-import MK4 from "../../images/beetroot/fruit.gif";
+import MK3 from "../../images/beetroot/fruit.gif";
+import MK4 from "../../images/pumpkin/fruit.gif";
 // import cauliflower from "../../images/cauliflower/fruit.png";
 // import parsnip from "../../images/parsnip/fruit.png";
 // import radish from "../../images/radish/fruit.png";

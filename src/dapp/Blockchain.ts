@@ -69,19 +69,19 @@ export class BlockChain {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0x1764A0Ad76A5Bc3460c56219f7A910ea7A988036"
+        "0x381fCf18b0a1d0BA0C935B404Dbe6564Ceef5Ca5"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0xCf22bF1aFD1145694c79A128FA8ab96C20f5Fd11"
+        "0xC82bc4eEdbcB4dCFbD84149C4e6CD206c6b37F7B"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
-        "0xf0F1Cc9192ca0064EB3D35e0DE1CE5e56572ecab"
+        ""
       );
       this.quickswap = new this.web3.eth.Contract(
         QuickSwap as any,
-        "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff"
+        ""
       );
       this.communityCrafting = new this.web3.eth.Contract(
         CommunityCrafting as any,
@@ -105,11 +105,11 @@ export class BlockChain {
 
       this.alchemyToken = new this.web3.eth.Contract(
         Token as any,
-        "0x1764A0Ad76A5Bc3460c56219f7A910ea7A988036"
+        "0x381fCf18b0a1d0BA0C935B404Dbe6564Ceef5Ca5"
       );
       this.alchemyFarm = new this.web3.eth.Contract(
         Farm as any,
-        "0xCf22bF1aFD1145694c79A128FA8ab96C20f5Fd11"
+        "0xC82bc4eEdbcB4dCFbD84149C4e6CD206c6b37F7B"
       );
     } catch (e) {
       // Timeout, retry
@@ -353,10 +353,12 @@ export class BlockChain {
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
-      
+      console.log(this.farm._address);
+      await this.approve(this.farm._address, price);
+
       this.farm.methods
         .levelUp()
-        .send({ from: this.account, gasPrice })
+        .send({ from: this.account , gasPrice })
         .on("error", function (error) {
           console.log({ error });
           // User rejected
