@@ -49,7 +49,7 @@ export interface Ingredient {
   name:
     | "Wood"
     | "Stone"
-    | "$SFF"
+    | "$SPM"
     | "Iron"
     | "Gold"
     | "Egg"
@@ -115,7 +115,7 @@ export const recipes: Recipe[] = [
     address: "0xc65C99E4c3AAb25322d4E808e5e96Ec774330696",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 1,
         image: coin,
       },
@@ -135,7 +135,7 @@ export const recipes: Recipe[] = [
         image: wood,
       },
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 2,
         image: coin,
       },
@@ -161,7 +161,7 @@ export const recipes: Recipe[] = [
         image: stone,
       },
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 2,
         image: coin,
       },
@@ -186,7 +186,7 @@ export const recipes: Recipe[] = [
         image: iron,
       },
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 10,
         image: coin,
       },
@@ -207,7 +207,7 @@ export const recipes: Recipe[] = [
         image: wood,
       },
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 10,
         image: coin,
       },
@@ -227,7 +227,7 @@ export const recipes: Recipe[] = [
         image: wood,
       },
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 10,
         image: coin,
       },
@@ -247,7 +247,7 @@ export const recipes: Recipe[] = [
         image: wood,
       },
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 10,
         image: coin,
       },
@@ -262,7 +262,7 @@ export const recipes: Recipe[] = [
     address: "0x71556745dA70F2103C50f0E577C1ACF8A9aAC05E",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 50,
         image: coin,
       },
@@ -289,7 +289,7 @@ export const recipes: Recipe[] = [
     address: "0x143Ba32499065b5F89c518d5B75a38F3529cE324",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 10,
         image: coin,
       },
@@ -314,7 +314,7 @@ export const recipes: Recipe[] = [
       "https://opensea.io/collection/sunflower-farmers-christmas-tree",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 300,
         image: coin,
       },
@@ -335,7 +335,7 @@ export const recipes: Recipe[] = [
     address: "0x3D422610242E66aB04069349DF9e189B90A42449",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 200,
         image: coin,
       },
@@ -363,7 +363,7 @@ export const recipes: Recipe[] = [
     address: "0xf0F1Cc9192ca0064EB3D35e0DE1CE5e56572ecab",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 10,
         image: coin,
       },
@@ -438,7 +438,7 @@ export const recipes: Recipe[] = [
     address: "0x457ea0b03dD671baC515FA5bf324918Db4B12669",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 30,
         image: coin,
       },
@@ -460,7 +460,7 @@ export const recipes: Recipe[] = [
     address: "0x35bE1387D1bBC2d263b73ab2825eE91f1fd75CF3",
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 5,
         image: coin,
       },
@@ -480,7 +480,7 @@ export const recipes: Recipe[] = [
     isLocked: true,
     ingredients: [
       {
-        name: "$SFF",
+        name: "$SPM",
         amount: 0.1,
         image: coin,
       },
