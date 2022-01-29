@@ -47,6 +47,23 @@
   margin-right: 8px;
 }
 
+.lottery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 71px;
+  margin-left: 150px;
+}
+
+.lottery-container > h3 {
+  color: #a1a1a1;
+  text-shadow: 1px 1px black;
+  font-size: 17px;
+  margin-top: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .current-price-supply-demand {
   color: white;
   text-shadow: 1px 1px black;

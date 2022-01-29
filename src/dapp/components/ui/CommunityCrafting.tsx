@@ -168,7 +168,7 @@ export const CommunityCrafting: React.FC<Props> = ({
         <div>
           <span className="community-title">Crowd Sourced Features</span>
           <span className="community-description">
-            80% $SFF burnt into LP
+            80% $SPM burnt into LP
           </span>
           <span className="community-description">
             16% sent to the designer
@@ -212,7 +212,7 @@ export const CommunityCrafting: React.FC<Props> = ({
           <div className="ingredient">
             <div>
               <img alt="img" className="ingredient-image" src={coin} />
-              <span className="ingredient-count">$SFF</span>
+              <span className="ingredient-count">$SPM</span>
             </div>
             <span
               className={`ingredient-text ${

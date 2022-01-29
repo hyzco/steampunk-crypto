@@ -316,11 +316,11 @@
 }
 
 #machine_craft {
-    width: 350%;
-    position: relative;
-    top: -55px;
-    left: -10px;
-    z-index: 9;
+  width: 365%;
+  position: relative;
+  top: -55px;
+  left: -32px;
+  z-index: 9;
 }
 
 #nft {

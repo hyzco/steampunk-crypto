@@ -84,13 +84,13 @@ export const CommunityApproval: React.FC<Props> = ({
           Crafting this item will burn your tokens into the liquidity pool.
         </span>
         <span className="community-guide-text">
-          Please note that prices change frequently and the $SFF amount may
+          Please note that prices change frequently and the $SPM amount may
           have a slippage. By crafting you accept these conditions.
         </span>
         {!isApproved && (
           <div>
             <span className="community-guide-text">
-              Step 1 - Approve $SFF
+              Step 1 - Approve $SPM
             </span>
             {!isApproving && <Button onClick={approve}>Approve</Button>}
             {isApproving && (
@@ -126,7 +126,7 @@ export const CommunityApproval: React.FC<Props> = ({
           <div className="ingredient">
             <div>
               <img alt="img" className="ingredient-image" src={icon} />
-              <span className="ingredient-count">$SFF</span>
+              <span className="ingredient-count">$SPM</span>
             </div>
             <span className={`ingredient-text`}>
               {sunflowerTokenAmount}
