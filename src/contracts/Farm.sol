@@ -281,7 +281,7 @@ contract FarmV2 {
     }
     
        
-    function getLandPrice(uint landSize) public view returns (uint price) {
+    function getLandPrice(uint landSize) private view returns (uint price) {
         uint decimals = token.decimals();
         if (landSize <= 5) {
             // $5

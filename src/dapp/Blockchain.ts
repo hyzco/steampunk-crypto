@@ -350,10 +350,6 @@ export class BlockChain {
     if (this.isTrial) {
       throw new Error("TRIAL_MODE");
     }
-    const price = getUpgradePrice({
-      totalSupply: this.totalSupply(),
-      farmSize: this.details.farm.length,
-    });
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
@@ -380,7 +376,10 @@ export class BlockChain {
         });
     });
 
-    
+    const price = getUpgradePrice({
+      totalSupply: this.totalSupply(),
+      farmSize: this.details.farm.length,
+    });
 
     this.details = {
       ...this.details,
