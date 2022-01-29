@@ -130,30 +130,11 @@ export const Field: React.FC<Props> = ({
     }
 
     if (square.fruit === Fruit.MK3) {
-      return <img alt="img" src={pumpkinSeedling} className="seedling pumpkin-seedling" />;
-    }
-
-    if (square.fruit === Fruit.MK4) {
       return <img alt="img" src={beetrootSeedling} className="seedling beetroot-seedling" />;
     }
 
-    if (square.fruit === Fruit.Cauliflower) {
-      return (
-        <img alt="img"
-          src={cauliflowerSeedling}
-          className="seedling cauliflower-seedling"
-        />
-      );
-    }
-
-    if (square.fruit === Fruit.Parsnip) {
-      return (
-        <img alt="img" src={parsnipSeedling} className="seedling parnsip-seedling" />
-      );
-    }
-
-    if (square.fruit === Fruit.Radish) {
-      return <img alt="img" src={radishSeedling} className="seedling radish-seedling" />;
+    if (square.fruit === Fruit.MK4) {
+      return <img alt="img" src={pumpkinSeedling} className="seedling pumpkin-seedling" />;
     }
 
     return null;
@@ -175,18 +156,6 @@ export const Field: React.FC<Props> = ({
 
     if (square.fruit === Fruit.MK4) {
       return <img alt="img" src={beetroot} className="beetroot" />;
-    }
-
-    if (square.fruit === Fruit.Cauliflower) {
-      return <img alt="img" src={cauliflower} className="cauliflower" />;
-    }
-
-    if (square.fruit === Fruit.Parsnip) {
-      return <img alt="img" src={parsnip} className="parsnip" />;
-    }
-
-    if (square.fruit === Fruit.Radish) {
-      return <img alt="img" src={radish} className="radish" />;
     }
 
     return null;
