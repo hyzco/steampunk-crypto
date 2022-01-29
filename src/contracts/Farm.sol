@@ -281,10 +281,10 @@ contract FarmV2 {
     }
     
        
-    function getLandPrice(uint landSize) private view returns (uint price) {
+    function getLandPrice(uint landSize) public view returns (uint price) {
         uint decimals = token.decimals();
         if (landSize <= 5) {
-            // $1
+            // $5
             return 5 * 10**decimals;
         } else if (landSize <= 8) {
             // 15
@@ -402,9 +402,9 @@ contract FarmV2 {
 
         require(balance >= fmcPrice, "INSUFFICIENT_FUNDS");
         
-        token.allowance(msg.sender, address(this));
+        // token.allowance(msg.sender, address(this));
 
-        token.approve(msg.sender, fmcPrice);
+        // token.approve(msg.sender, fmcPrice);
 
         // Store rewards in the Farm Contract to redistribute
         token.transferFrom(msg.sender, address(this), fmcPrice);

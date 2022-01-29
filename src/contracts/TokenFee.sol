@@ -124,7 +124,6 @@ contract TokenV2 is IERC20, Ownable, Pausable {
     uint256 public  fees = 2;
     address public minter;
 
-  
     mapping (address => uint256) internal _balances;
     mapping (address => mapping (address => uint256)) internal _allowed;
 
@@ -153,18 +152,17 @@ contract TokenV2 is IERC20, Ownable, Pausable {
 	  }
 
     function setDev(address wallet)  public {
-      require(msg.sender == owner(), "owner only");
+      require(isOwner(), "owner only");
       devfeeWallet=wallet;
 	  }
 
     function passMinterRole(address farm) public returns (bool) {
-    require(minter == address(0) || msg.sender == minter, "You are not the minter");
+      require(minter == address(0) || msg.sender == minter, "You are not the minter");
       minter = farm;
 
       emit MinterChanged(msg.sender, farm);
       return true;
     }
-  
 
     function name(
     ) public view returns (string memory)
@@ -246,6 +244,7 @@ contract TokenV2 is IERC20, Ownable, Pausable {
         _balances[_to] = SafeMath.add(_balances[_to], _value);
         _allowed[_from][msg.sender] = SafeMath.sub(_allowed[_from][msg.sender], _value);
         
+
         emit Transfer(_from, _to, _value);
         // uint256 fee = _value.mul(fees).div(100); // Calculate fee
         // emit Transfer(_from, _to, _value.sub(fee));
@@ -309,7 +308,7 @@ contract TokenV2 is IERC20, Ownable, Pausable {
         // require(msg.sender == minter, "You are not the minter");
 
         // _totalSupply = _totalSupply.add(_amount);
-    require(minter == address(0) || msg.sender == minter, "You are not the minter");
+        require(minter == address(0) || msg.sender == minter, "You are not the minter");
          _balances[_to] = _balances[_to].add(_amount);
          _totalSupply = _totalSupply.add(_amount);
          emit Mint(msg.sender, _to, _amount);

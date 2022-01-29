@@ -69,11 +69,11 @@ export class BlockChain {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0xdaF21eE4B5AD8874763aEd07BdEE7B94418727dE"
+        "0x381fCf18b0a1d0BA0C935B404Dbe6564Ceef5Ca5"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0x04A43d4B513589eD6b8c91309DcB2D599dC54364"
+        "0xC82bc4eEdbcB4dCFbD84149C4e6CD206c6b37F7B"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
@@ -105,11 +105,11 @@ export class BlockChain {
 
       this.alchemyToken = new this.web3.eth.Contract(
         Token as any,
-        "0xdaF21eE4B5AD8874763aEd07BdEE7B94418727dE"
+        "0x381fCf18b0a1d0BA0C935B404Dbe6564Ceef5Ca5"
       );
       this.alchemyFarm = new this.web3.eth.Contract(
         Farm as any,
-        "0x04A43d4B513589eD6b8c91309DcB2D599dC54364"
+        "0xC82bc4eEdbcB4dCFbD84149C4e6CD206c6b37F7B"
       );
     } catch (e) {
       // Timeout, retry
@@ -357,8 +357,8 @@ export class BlockChain {
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
-      
-      // await this.approve(this.farm, price);
+      console.log(this.farm._address);
+      await this.approve(this.farm._address, price);
 
       this.farm.methods
         .levelUp()
