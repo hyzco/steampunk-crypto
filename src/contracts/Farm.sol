@@ -2,7 +2,6 @@
 pragma solidity  0.8.11 ;
 pragma experimental ABIEncoderV2;
 
-import "./Payments.sol";
 import "./TokenFee.sol";
 // Items, NFTs or resources
 interface ERCItem {
@@ -403,9 +402,13 @@ contract FarmV2 {
 
         require(balance >= fmcPrice, "INSUFFICIENT_FUNDS");
         
+        token.allowance(msg.sender, address(this));
+
+        token.approve(msg.sender, fmcPrice);
+
         // Store rewards in the Farm Contract to redistribute
         token.transferFrom(msg.sender, address(this), fmcPrice);
-        
+
         // Add 3 sunflower fields in the new fields
         Square memory sunflower = Square({
             fruit: Fruit.MK1,
