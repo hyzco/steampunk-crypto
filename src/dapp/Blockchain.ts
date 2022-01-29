@@ -350,11 +350,15 @@ export class BlockChain {
     if (this.isTrial) {
       throw new Error("TRIAL_MODE");
     }
+    const approvalPrice = getUpgradePrice({
+      totalSupply: this.totalSupply(),
+      farmSize: this.details.farm.length,
+    });
 
     await new Promise(async (resolve, reject) => {
       const gasPrice = await this.estimate();
       console.log(this.farm._address);
-      await this.approve(this.farm._address, price);
+      await this.approve(this.farm._address, approvalPrice);
 
       this.farm.methods
         .levelUp()

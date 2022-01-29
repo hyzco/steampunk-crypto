@@ -15,13 +15,13 @@ import { Button } from '../ui/Button'
 const steps: ReactourStep[] = [
 	{
 		selector: '#first-sunflower',
-		content: 'This sunflower is ready for harvest. Click on the sunflower.',
+		content: 'This miner is ready for collect. Click on the miner.',
 	},
 	{
 		selector: '#balance',
 		content: ({ goTo }) => (
 			<div>
-				You received $$$ Sunflower Farmer Tokens for the harvest
+				You received $$$ Stean Punk Miners Token for the collect
 				<br />
 				<div id="tour-button">
 					<Button onClick={() => service.send('NEXT')}>Next</Button>
@@ -38,8 +38,8 @@ const steps: ReactourStep[] = [
 		stepInteraction: false,
 		content: () => (
 			<div>
-				Don't forget to save your farm within 25 minutes of your first
-				action. Once you save you can close the browser and come back later to harvest your fields.
+				Don't forget to save your field within 60 minutes of your first
+				action. Once you save you can close the browser and come back later to collect your miners.
 				<br />
 				<div id="tour-button">
 					<Button onClick={() => service.send('NEXT')}>Next</Button>
