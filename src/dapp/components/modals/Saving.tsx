@@ -11,7 +11,7 @@ export const Saving: React.FC = () => (
     <Panel>
         <div id="saving">
             <h4>Saving...</h4>
-            <h6>Miners are working hard to save your farm to the blockchain.</h6>
+            <h6>Miners are working hard to save your field to the blockchain.</h6>
 
             <div id='mining-animation'>
                 <img alt="img" id='mining-gif' src={person} />
