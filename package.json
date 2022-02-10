@@ -1,8 +1,11 @@
 {
-  "name": "sunflower-farmers",
-  "version": "0.1.2",
-  "description": "Sunflower Farmers contract",
-  "author": "developer@sunflower-farmers.com",
+  "name": "Steam Punk Miners",
+  "version": "0.5.0",
+  "description": "Steam Punk Miners P2E Blockchain based game.",
+  "author": "developer@steampunkminers.io",
+  "engines": {
+    "node": "16.x"
+  },
   "homepage": ".",
   "dependencies": {
     "@binance-chain/web3": "^1.6.1",
