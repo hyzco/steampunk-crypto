@@ -150,13 +150,13 @@ export class BlockChain {
         // this.web3 = web3;
 
         // console.log(this.web3);
-        this.web3 = new Web3((window as any).web3.currentProvider);
+        // this.web3 = new Web3((window as any).web3.currentProvider);
       } catch (error) {
         // User denied account access...
         console.error(error);
       }
     } else if ((window as any).web3) {
-      this.web3 = new Web3((window as any).web3.currentProvider);
+      this.web3 = new Web3((window as any).ethereum);
     } else {
       throw new Error("NO_WEB3");
     }
