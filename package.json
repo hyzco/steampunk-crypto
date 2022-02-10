@@ -57,7 +57,7 @@
     "lint": "prettier --check \"./**/*.{js,ts,json,sass,scss,css}\" --loglevel log",
     "lint-fix": "prettier --write \"./**/*.{js,ts,json,sass,scss,css}\" --loglevel log",
     "prepare": "if [ ! -d '.husky' ]; then husky install; fi",
-    "start": "serve -s builds -p 3000",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "testscript": "echo \"test\" && exit 1"
   },
