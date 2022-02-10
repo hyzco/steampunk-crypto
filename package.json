@@ -40,6 +40,7 @@
     "react-dom": "16.13.1",
     "react-scripts": "3.4.3",
     "reactour": "^1.18.6",
+    "serve": "^13.0.2",
     "solc": "^0.8.11",
     "styled-components": "^4.0.0",
     "truffle": "5.1.63",
@@ -56,7 +57,7 @@
     "lint": "prettier --check \"./**/*.{js,ts,json,sass,scss,css}\" --loglevel log",
     "lint-fix": "prettier --write \"./**/*.{js,ts,json,sass,scss,css}\" --loglevel log",
     "prepare": "if [ ! -d '.husky' ]; then husky install; fi",
-    "start": "react-scripts start",
+    "start": "serve -s builds",
     "test": "react-scripts test",
     "testscript": "echo \"test\" && exit 1"
   },
