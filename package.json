@@ -1,13 +1,19 @@
 {
-  "name": "sunflower-farmers",
-  "version": "0.1.2",
-  "description": "Sunflower Farmers contract",
-  "author": "developer@sunflower-farmers.com",
+  "name": "SteamPunkMiners",
+  "version": "0.5.0",
+  "description": "Steam Punk Miners P2E Blockchain based game.",
+  "author": "developer@steampunkminers.io",
+  "engines": {
+    "node": "12.x"
+  },
   "homepage": ".",
   "dependencies": {
     "@binance-chain/web3": "^1.6.1",
     "@openzeppelin/contracts": "3.3.0",
     "@truffle/hdwallet-provider": "1.1.0",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
     "@types/reactour": "^1.18.2",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
@@ -34,6 +40,7 @@
     "react-dom": "16.13.1",
     "react-scripts": "3.4.3",
     "reactour": "^1.18.6",
+    "serve": "^13.0.2",
     "solc": "^0.8.11",
     "styled-components": "^4.0.0",
     "truffle": "5.1.63",
@@ -50,7 +57,7 @@
     "lint": "prettier --check \"./**/*.{js,ts,json,sass,scss,css}\" --loglevel log",
     "lint-fix": "prettier --write \"./**/*.{js,ts,json,sass,scss,css}\" --loglevel log",
     "prepare": "if [ ! -d '.husky' ]; then husky install; fi",
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "test": "react-scripts test",
     "testscript": "echo \"test\" && exit 1"
   },
@@ -68,7 +75,7 @@
     "@typechain/truffle-v5": "^4.0.1",
     "@types/chai": "^4.2.17",
     "@types/mocha": "^8.2.2",
-    "@types/node": "^15.0.1",
+    "@types/node": "^15.14.9",
     "@typescript-eslint/eslint-plugin": "4.18.0",
     "@typescript-eslint/parser": "4.18.0",
     "eslint-config-prettier": "8.1.0",
@@ -82,7 +89,7 @@
     "prettier": "^2.5.1",
     "ts-node": "^9.1.1",
     "typechain": "^4.0.3",
-    "typescript": "^4.2.4"
+    "typescript": "^4.5.5"
   },
   "prettier": {
     "printWidth": 75,
