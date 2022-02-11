@@ -137,26 +137,17 @@ export class BlockChain {
 
   
   private async setupWeb3() {
-    if ((window as any).ethereum) {
+   if ((window as any).ethereum) {
       try {
         // Request account access if needed
-        // await (window as any).ethereum.enable();
+        await (window as any).ethereum.enable();
         this.web3 = new Web3((window as any).ethereum);
-        // const provider = new EthWeb3.providers.HttpProvider(
-        //   'https://rinkeby.infura.io/v3/172a5e1258804b4d919ded68b1ae1490'
-        // );
-
-        // const web3 = new Web3(provider);
-        // this.web3 = web3;
-
-        // console.log(this.web3);
-        // this.web3 = new Web3((window as any).web3.currentProvider);
       } catch (error) {
         // User denied account access...
         console.error(error);
       }
     } else if ((window as any).web3) {
-      this.web3 = new Web3((window as any).ethereum);
+      this.web3 = new Web3((window as any).web3.currentProvider);
     } else {
       throw new Error("NO_WEB3");
     }
