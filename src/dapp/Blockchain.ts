@@ -69,11 +69,11 @@ export class BlockChain {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0x381fCf18b0a1d0BA0C935B404Dbe6564Ceef5Ca5"
+        "0xeb76f367e4BAE140C0CD199f1e87b36FDf8bda7E"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0xC82bc4eEdbcB4dCFbD84149C4e6CD206c6b37F7B"
+        "0xa9e4694f716096aaF4A03E86E0df89EB232f3C40"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
@@ -105,11 +105,11 @@ export class BlockChain {
 
       this.alchemyToken = new this.web3.eth.Contract(
         Token as any,
-        "0x381fCf18b0a1d0BA0C935B404Dbe6564Ceef5Ca5"
+        "0xeb76f367e4BAE140C0CD199f1e87b36FDf8bda7E"
       );
       this.alchemyFarm = new this.web3.eth.Contract(
         Farm as any,
-        "0xC82bc4eEdbcB4dCFbD84149C4e6CD206c6b37F7B"
+        "0xa9e4694f716096aaF4A03E86E0df89EB232f3C40"
       );
     } catch (e) {
       // Timeout, retry
