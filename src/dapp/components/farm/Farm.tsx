@@ -237,7 +237,7 @@ export const Farm: React.FC = () => {
 
   return (
     <>
-      <Tour />
+      {/* <Tour /> */}
       <Land
         fruits={fruits}
         selectedItem={selectedItem}

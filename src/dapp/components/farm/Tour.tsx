@@ -31,7 +31,7 @@ const steps: ReactourStep[] = [
 	},
 	{
 		selector: '#first-sunflower',
-		content: 'Now you can plant a new sunflower',
+		content: 'Now you can plant a new steampunk miners',
 	},
 	{
 		selector: '#save-button',
