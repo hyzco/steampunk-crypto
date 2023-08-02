@@ -1,1 +1,1 @@
-# SteamPunk Miners
+# SteamPunk Miners - blockchain based
